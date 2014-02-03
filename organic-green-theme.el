@@ -208,16 +208,18 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
    ))
 
+(custom-theme-set-variables
+ 'organic-green
+ `(hl-paren-colors '("#326B6B"))
+ `(hl-paren-background-colors
+   '("#00FF99" "#CCFF99" "#FFCC99" "#FF9999" "#FF99CC"
+     "#CC99FF" "#9999FF" "#99CCFF" "#99FFCC" "#7FFF00")))
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'organic-green)
-
-(setq hl-paren-colors '("#326B6B"))
-(setq hl-paren-background-colors '(
-      "#00FF99" "#CCFF99" "#FFCC99" "#FF9999" "#FF99CC"
-      "#CC99FF" "#9999FF" "#99CCFF" "#99FFCC" "#7FFF00"))
 
 ;;; organic-green-theme.el ends here
