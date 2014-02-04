@@ -5,7 +5,7 @@ Low-contrast green color theme for Emacs.
 ## Installation:
 
 ```lisp
-(package-install "organic-green-theme")
+(package-install 'organic-green-theme)
 ```
 
 Then in your emacs config somewhere:
