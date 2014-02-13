@@ -199,6 +199,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(powerline-inactive1  ((t (:background "grey70" :inherit mode-line-inactive))) t)
    '(powerline-inactive2  ((t (:background "grey80" :inherit mode-line-inactive))) t)
 
+   `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
+                          :box (:line-width 1 :color "white" :style released-button)))))
+
    ;; web-mode
    `(web-mode-current-element-highlight-face
      ((,class (:background ,minor-green-highlight-background))))
