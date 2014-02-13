@@ -221,7 +221,12 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      "#CC99FF" "#9999FF" "#99CCFF" "#99FFCC" "#7FFF00"))
 
  ;; fill-column-indicator
- `(fci-rule-color "gray80"))
+ `(fci-rule-color "gray80")
+
+ ;; marker
+ `(highlight-symbol-colors
+   '("#EFFF00" "#73CD4F" "#83DDFF" "MediumPurple1" "#66CDAA"
+     "DarkOrange" "HotPink1" "#809FFF" "#ADFF2F")))
 
 ;;;###autoload
 (when load-file-name
