@@ -84,9 +84,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; Mode line faces
    `(mode-line ((,class (:box (:line-width -1 :style released-button)
-             :background ,alum-2 :foreground ,alum-6))))
+                              :background ,alum-2 :foreground ,alum-6))))
    `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button)
-                  :background ,alum-1 :foreground ,alum-6))))
+                                       :background ,alum-1 :foreground ,alum-6))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:weight bold :foreground ,blue-3))))
@@ -200,7 +200,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(powerline-inactive2  ((t (:background "grey80" :inherit mode-line-inactive))) t)
 
    `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
-                          :box (:line-width 1 :color "white" :style released-button)))))
+                                   :box (:line-width 1 :color "white" :style released-button)))))
 
    ;; web-mode
    `(web-mode-current-element-highlight-face
@@ -209,7 +209,22 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(web-mode-html-attr-name-face ((t (:foreground "#4045F0"))) t)
    `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
+
+   ;; rainbow-delimiters
+   `(rainbow-delimiters-depth-1-face ((t (:foreground "#666666"))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground "#229900"))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground "#999900"))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground "#2265DC"))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground "#00A89B"))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground "#5544EE"))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground "#EE66E8"))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground "#F57900"))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground "#000099"))))
+   `(rainbow-delimiters-depth-10-face ((t (:foreground "#A020F0"))))
+   `(rainbow-delimiters-depth-11-face ((t (:foreground "#CCFF99"))))
+   `(rainbow-delimiters-depth-12-face ((t (:foreground "#FFCC99"))))
    ))
+;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
 
 (custom-theme-set-variables
  'organic-green
