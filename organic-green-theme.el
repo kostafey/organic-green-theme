@@ -210,7 +210,12 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
 
+   ;;Highlight pair parentheses
+   `(show-paren-match ((t (:background "#F0F0A1"))))
+   `(show-paren-mismatch ((t (:background ,minor-red-highlight-background))))   
+
    ;; rainbow-delimiters
+   ;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
    `(rainbow-delimiters-depth-1-face ((t (:foreground "#666666"))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground "#229900"))))
    `(rainbow-delimiters-depth-3-face ((t (:foreground "#999900"))))
@@ -224,7 +229,6 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(rainbow-delimiters-depth-11-face ((t (:foreground "#CCFF99"))))
    `(rainbow-delimiters-depth-12-face ((t (:foreground "#FFCC99"))))
    ))
-;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
 
 (custom-theme-set-variables
  'organic-green
