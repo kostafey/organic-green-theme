@@ -99,7 +99,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(font-lock-builtin-face ((,class (:foreground ,organic-builtin-fg))))
    `(font-lock-comment-face ((,class (:foreground ,organic-comment-fg))))
    `(font-lock-constant-face ((,class (:foreground ,organic-constant-fg))))
-   `(font-lock-function-name-face ((,class (:weight extra-bold :foreground "#3032FF")))) ;"blue"
+   `(font-lock-function-name-face ((,class (:weight extra-bold :foreground "#3032FF")))) ;"blue" "#1155CF" "#3032FF"
    `(font-lock-keyword-face ((,class (:weight semi-bold :foreground "purple"))))
    `(font-lock-string-face ((t (:foreground ,organic-string-fg))) t) ; "ForestGreen"
    `(font-lock-type-face ((t (:foreground ,organic-builtin-fg :weight bold))))
@@ -210,9 +210,11 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
 
+   '(table-cell ((t (:background "#E3FFE1"))) t)
+
    ;;Highlight pair parentheses
    `(show-paren-match ((t (:background "#F0F0A1"))))
-   `(show-paren-mismatch ((t (:background ,minor-red-highlight-background))))   
+   `(show-paren-mismatch ((t (:background ,minor-red-highlight-background))))
 
    ;; rainbow-delimiters
    ;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
