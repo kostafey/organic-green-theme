@@ -210,7 +210,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
 
-   '(table-cell ((t (:background "#E3FFE1"))) t)
+   `(table-cell ((t (:foreground ,organic-fg :background "#E3FFE1"))) t)
 
    ;;Highlight pair parentheses
    `(show-paren-match ((t (:background "#F0F0A1"))))
