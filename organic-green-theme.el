@@ -210,6 +210,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
 
+   `(eldoc-highlight-function-argument
+     ((t (:foreground ,organic-string-fg :weight bold))) t)
+
    `(table-cell ((t (:foreground ,organic-fg :background "#E3FFE1"))) t)
 
    ;;Highlight pair parentheses
