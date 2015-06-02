@@ -34,6 +34,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 (let* ((class '((class color) (min-colors 89)))
        ;; Organic-green misc palette colors.
        (geep-sea-green "#339966")
+       (sea-eye        "#00A86B")
        (cham-3         "#4e9a06")
        (blue-0         "#8cc4ff")
        (blue-2         "#3465a4")
@@ -90,7 +91,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:weight bold :foreground ,blue-3))))
-   `(escape-glyph ((,class (:foreground ,red-3))))
+   `(escape-glyph ((,class (:foreground ,sea-eye))))
    `(error ((,class (:foreground ,red-3))))
    `(warning ((,class (:foreground ,orange-3))))
    `(success ((,class (:foreground ,cham-3))))
