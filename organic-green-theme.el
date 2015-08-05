@@ -143,6 +143,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(quack-pltish-paren-face ((((class color) (background light)) (:foreground "#53AD2F"))))
    '(quack-pltish-keyword-face ((t (:foreground "#A020F0" :weight bold))))
 
+   ;; js2-mode
+   '(js2-external-variable ((t (:foreground "DodgerBlue3"))))
+
    ;; erc
    '(erc-action-face ((t (:foreground "gray" :weight bold))))
    '(erc-command-indicator-face ((t (:foreground "black" :weight bold))))
