@@ -26,6 +26,7 @@
 
 (make-face 'mode-line-default-face)
 (make-face 'mode-line-header)
+(make-face 'tcl-substitution-char-face)
 
 (deftheme organic-green
   "Low-contrast green color theme.
@@ -146,6 +147,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; js2-mode
    '(js2-external-variable ((t (:foreground "DodgerBlue3"))))
+
+   ;; Tcl
+   '(tcl-substitution-char-face ((t (:foreground "OliveDrab4"))))
 
    ;; erc
    '(erc-action-face ((t (:foreground "gray" :weight bold))))
