@@ -16,10 +16,10 @@ Then in your emacs config somewhere:
 
 ## Screenshots
 
-<img src="https://dl.dropboxusercontent.com/u/820526/psw-switch-buffer.png" width="600" />
+<img src="http://i.imgur.com/TLYAOi9.png" width="800" />
 
 ## License
 
-Copyright © 2009-2014 Kostafey <kostafey@gmail.com>
+Copyright © 2009-2015 Kostafey <kostafey@gmail.com>
 
 Distributed under the General Public License 2.0+

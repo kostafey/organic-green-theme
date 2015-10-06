@@ -186,6 +186,12 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(whitespace-space-before-tab ((t (:background ,organic-bg :foreground ,alum-3))) t)
    `(whitespace-trailing ((t (:background ,organic-bg :foreground ,plum-1))) t)
 
+   ;; diff
+   '(diff-indicator-added ((t (:foreground "#339933"))) t)
+   '(diff-added ((t (:foreground "#339933"))) t)
+   `(diff-indicator-removed ((t (:foreground ,red-2))) t)
+   `(diff-removed ((t (:foreground ,red-2))) t)
+
    ;; magit
    '(magit-diff-add ((t (:foreground "#339933"))) t)
    `(magit-diff-del ((t (:foreground ,red-2))) t)
