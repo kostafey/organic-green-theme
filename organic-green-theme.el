@@ -1,6 +1,6 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
 
-;;; Copyright © 2009-2014 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2015 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -196,6 +196,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(magit-diff-add ((t (:foreground "#339933"))) t)
    `(magit-diff-del ((t (:foreground ,red-2))) t)
    '(magit-item-highlight ((t (:background "#E3F2E1"))) t)
+   '(magit-log-author ((t (:foreground "SpringGreen4"))) t)
 
    ;; misc
    '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
