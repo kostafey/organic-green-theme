@@ -197,6 +197,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(magit-diff-del ((t (:foreground ,red-2))) t)
    '(magit-item-highlight ((t (:background "#E3F2E1"))) t)
    '(magit-log-author ((t (:foreground "SpringGreen4"))) t)
+   '(magit-popup-argument ((t (:foreground "#3032FF"))) t)
 
    ;; misc
    '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
