@@ -1,6 +1,6 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
 
-;;; Copyright © 2009-2015 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2016 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -147,6 +147,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; js2-mode
    '(js2-external-variable ((t (:foreground "DodgerBlue3"))))
+
+   ;; clojure/CIDER
+   `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color "#F0F0A1")))))
 
    ;; Tcl
    '(tcl-substitution-char-face ((t (:foreground "OliveDrab4"))))
