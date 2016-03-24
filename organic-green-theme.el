@@ -101,7 +101,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(font-lock-builtin-face ((,class (:foreground ,organic-builtin-fg))))
    `(font-lock-comment-face ((,class (:foreground ,organic-comment-fg))))
    `(font-lock-constant-face ((,class (:foreground ,organic-constant-fg))))
-   `(font-lock-function-name-face ((,class (:weight extra-bold :foreground "#3032FF")))) ;"blue" "#1155CF" "#3032FF"
+   `(font-lock-function-name-face ((,class (:weight extra-bold :foreground "#3063EA")))) ;"blue" "#1155CF" "#3032FF" "#3063EA"
    `(font-lock-keyword-face ((,class (:weight semi-bold :foreground "purple"))))
    `(font-lock-string-face ((t (:foreground ,organic-string-fg))) t) ; "ForestGreen"
    `(font-lock-type-face ((t (:foreground ,organic-builtin-fg :weight bold))))
@@ -230,6 +230,10 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
                                    :box (:line-width 1 :color "white" :style released-button)))))
+
+   `(tabbar-selected ((t :inherit tabbar-default
+                         :box (:line-width 1 :color "white" :style pressed-button)
+                         :foreground ,alum-6 :bold t)))
 
    ;; web-mode
    `(web-mode-current-element-highlight-face
