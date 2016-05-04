@@ -162,6 +162,12 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(erc-notice-face ((t (:foreground "dark sea green" :weight bold))))
    '(erc-timestamp-face ((t (:foreground "#32CD32" :weight bold))))
 
+   ;; circe
+   '(circe-server-face ((t (:foreground "dark sea green"))))
+   '(circe-prompt-face ((t (:foreground "gray25" :background "LightSeaGreen" :weight bold))))
+   '(lui-time-stamp-face ((t (:foreground "#32CD32"))))
+   '(circe-highlight-nick-face ((t (:foreground "DarkTurquoise")))) ;"#0445b7"
+
    ;; rst
    '(rst-definition ((t (:inherit font-lock-constant-face))) t)
    `(rst-level-1 ((t (:background ,minor-green-highlight-background))) t)
