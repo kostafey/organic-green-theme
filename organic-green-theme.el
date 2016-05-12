@@ -218,6 +218,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(magit-branch-remote ((t (:foreground "DarkOliveGreen4"))) t)
    '(magit-section-heading ((t (:bold t :foreground "DarkGoldenrod4"))) t)
 
+   ;; org-mode
+   `(org-table ((t (:foreground ,organic-builtin-fg))) t)
+
    ;; misc
    '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
    '(speedbar-tag-face ((t (:foreground "DarkSlateGray4"))))
