@@ -151,6 +151,14 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    ;; clojure/CIDER
    `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color "#F0F0A1")))))
 
+   ;; java
+   `(jdee-java-properties-font-lock-comment-face ((t (:foreground ,organic-comment-fg))))
+   '(jdee-java-properties-font-lock-equal-face ((t (:foreground "DodgerBlue3"))))
+   '(jdee-java-properties-font-lock-substitution-face ((t (:inherit font-lock-function-name-face :bold nil))))
+   '(jdee-java-properties-font-lock-class-name-face ((t (:inherit font-lock-constant-face :bold nil))))
+   '(jdee-java-properties-font-lock-value-face ((t (:inherit font-lock-string-face :bold nil))))
+   `(jdee-java-properties-font-lock-backslash-face ((t (:foreground ,sea-eye))))
+
    ;; Tcl
    '(tcl-substitution-char-face ((t (:foreground "OliveDrab4"))))
 
