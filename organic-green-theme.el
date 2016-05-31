@@ -245,12 +245,15 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(powerline-inactive1  ((t (:background "grey70" :inherit mode-line-inactive))) t)
    '(powerline-inactive2  ((t (:background "grey80" :inherit mode-line-inactive))) t)
 
+   ;; tabbar
    `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
-                                   :box (:line-width 1 :color "white" :style released-button)))))
-
+                           :bold t
+                           :box (:line-width 1 :color "white"
+                                 :style released-button)))))
    `(tabbar-selected ((t :inherit tabbar-default
                          :box (:line-width 1 :color "white" :style pressed-button)
                          :foreground ,alum-6 :bold t)))
+   `(tabbar-selected-modified ((t :inherit tabbar-selected)))
 
    ;; web-mode
    `(web-mode-current-element-highlight-face
