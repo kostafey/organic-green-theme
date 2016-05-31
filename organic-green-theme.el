@@ -247,9 +247,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; tabbar
    `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
-                           :bold t
-                           :box (:line-width 1 :color "white"
-                                 :style released-button)))))
+                          :bold t
+                          :box (:line-width 1 :color "white"
+                                :style released-button)))))
    `(tabbar-selected ((t :inherit tabbar-default
                          :box (:line-width 1 :color "white" :style pressed-button)
                          :foreground ,alum-6 :bold t)))
