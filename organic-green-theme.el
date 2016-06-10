@@ -262,6 +262,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(web-mode-html-attr-name-face ((t (:foreground "#4045F0"))) t)
    `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
+   `(web-mode-css-selector-face ((t (:foreground ,organic-builtin-fg))) t)
 
    `(eldoc-highlight-function-argument
      ((t (:foreground ,organic-string-fg :weight bold))) t)
