@@ -16,7 +16,7 @@ Then in your emacs config somewhere:
 
 ## Screenshots
 
-<img src="http://i.imgur.com/TLYAOi9.png" width="800" />
+<img src="http://i.imgur.com/GXoUtD6.png" width="800" />
 
 ## License
 
