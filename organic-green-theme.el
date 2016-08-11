@@ -228,7 +228,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    '(git-gutter:added ((t (:foreground "#339933"))) t)
    `(git-gutter:deleted ((t (:foreground ,red-2))) t)
-   '(git-gutter:modified ((t (:foreground "grey60"))) t)
+   '(git-gutter:modified ((t (:foreground "DodgerBlue3"))) t)
 
    ;; org-mode
    `(org-table ((t (:foreground ,organic-builtin-fg))) t)
