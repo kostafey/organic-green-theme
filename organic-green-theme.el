@@ -147,6 +147,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; js2-mode
    '(js2-external-variable ((t (:foreground "DodgerBlue3"))))
+   `(js2-function-param ((t (:foreground ,organic-builtin-fg)))) ;"SeaGreen" ,sea-eye
 
    ;; clojure/CIDER
    `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color "#F0F0A1")))))
@@ -215,7 +216,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(magit-diff-added ((t (:foreground "#22aa22" :background "#ddffdd"))) t)
    `(magit-diff-removed ((t (:foreground "#aa2222" :background "#ffdddd"))) t)
    `(magit-diff-added-highlight ((t (:foreground "#22aa22" :background "#cceecc"))) t)
-  `(magit-diff-removed-highlight ((t (:foreground "#aa2222" :background "#eecccc"))) t)
+   `(magit-diff-removed-highlight ((t (:foreground "#aa2222" :background "#eecccc"))) t)
    `(magit-diff-context-highlight ((t (:background ,organic-bg :foreground "grey50"))) t)
    `(magit-diff-file-heading-highlight ((t (:background ,minor-green-highlight-background))) t)
    '(magit-item-highlight ((t (:background "#E3F2E1"))) t)
@@ -237,7 +238,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    ;; misc
    '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
    '(speedbar-tag-face ((t (:foreground "DarkSlateGray4"))))
-   '(yas/field-highlight-face ((t (:background "#DDEE00"))))
+   '(yas-field-highlight-face ((t (:background "#DDEE00"))))
    `(idle-highlight ((t (:foreground ,organic-fg :background ,minor-yellow-highlight-background))) t)
    `(comint-highlight-prompt ((t (:foreground ,organic-constant-fg :weight bold))) t)
    `(speedbar-selected-face ((t (:foreground ,geep-sea-green :underline t))) t)
