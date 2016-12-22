@@ -227,9 +227,15 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    '(magit-branch-remote ((t (:foreground "DarkOliveGreen4"))) t)
    '(magit-section-heading ((t (:bold t :foreground "DarkGoldenrod4"))) t)
 
+   ;; git-gutter
    '(git-gutter:added ((t (:foreground "#339933"))) t)
    `(git-gutter:deleted ((t (:foreground ,red-2))) t)
    '(git-gutter:modified ((t (:foreground "DodgerBlue3"))) t)
+
+   ;; git-gutter-fringe
+   '(git-gutter-fr:added ((t (:foreground "#339933"))) t)
+   `(git-gutter-fr:deleted ((t (:foreground ,red-2))) t)
+   `(git-gutter-fr:modified ((t (:foreground ,organic-comment-fg))) t)
 
    ;; org-mode
    `(org-table ((t (:foreground ,organic-builtin-fg))) t)
