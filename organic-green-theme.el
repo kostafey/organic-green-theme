@@ -325,7 +325,10 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
  ;; marker
  `(highlight-symbol-colors
    '("#EFFF00" "#73CD4F" "#83DDFF" "MediumPurple1" "#66CDAA"
-     "DarkOrange" "HotPink1" "#809FFF" "#ADFF2F")))
+     "DarkOrange" "HotPink1" "#809FFF" "#ADFF2F"))
+
+ ;; org-mode code blocks
+ `(org-src-block-faces '(("emacs-lisp" (:background "#F0FFF0")))))
 
 ;;;###autoload
 (when load-file-name
