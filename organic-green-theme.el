@@ -1,6 +1,6 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
 
-;;; Copyright © 2009-2016 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2018 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -93,7 +93,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:weight bold :foreground ,blue-3))))
    `(escape-glyph ((,class (:foreground ,sea-eye))))
-   `(error ((,class (:foreground ,red-3))))
+   `(error ((,class (:foreground ,red-3 :weight bold))))
    `(warning ((,class (:foreground ,orange-3))))
    `(success ((,class (:foreground ,cham-3))))
 
