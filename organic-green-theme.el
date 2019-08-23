@@ -243,7 +243,12 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
    ;; org-mode
    `(org-table ((t (:foreground ,organic-builtin-fg))) t)
-   `(org-level-4 ((t (:foreground ,sea-eye))) t)
+   `(org-level-1 ((t (:inherit font-lock-function-name-face :bold t))) t)
+   `(org-level-2 ((t (:inherit font-lock-variable-name-face :bold t))) t)
+   `(org-level-3 ((t (:inherit font-lock-keyword-face :bold t))) t)
+   `(org-level-4 ((t (:foreground ,sea-eye :bold t))) t)
+   `(org-level-5 ((t (:foreground  ,blue-2 :bold t))) t)
+   `(org-level-6 ((t (:foreground "LightSeaGreen" :bold t))) t)
 
    ;; misc
    '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
