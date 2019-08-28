@@ -20,6 +20,6 @@ Then in your emacs config somewhere:
 
 ## License
 
-Copyright © 2009-2018 Kostafey <kostafey@gmail.com>
+Copyright © 2009-2019 Kostafey <kostafey@gmail.com>
 
 Distributed under the General Public License 2.0+

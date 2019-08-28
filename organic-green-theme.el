@@ -1,6 +1,6 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
 
-;;; Copyright © 2009-2018 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2019 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -249,6 +249,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(org-level-4 ((t (:foreground ,sea-eye :bold t))) t)
    `(org-level-5 ((t (:foreground  ,blue-2 :bold t))) t)
    `(org-level-6 ((t (:foreground "LightSeaGreen" :bold t))) t)
+   `(org-block ((,class (:foreground ,organic-fg))))
+   `(org-block-begin-line ((t (:foreground ,organic-constant-fg))) t)
+   `(org-block-end-line ((t (:foreground ,organic-constant-fg))) t)
 
    ;; misc
    '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
@@ -333,7 +336,8 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      "DarkOrange" "HotPink1" "#809FFF" "#ADFF2F"))
 
  ;; org-mode code blocks
- `(org-src-block-faces '(("emacs-lisp" (:background "#F0FFF0")))))
+ `(org-src-block-faces '(("emacs-lisp" (:background "#F0FFF0"))
+                         ("dot" (:foreground "gray50")))))
 
 ;;;###autoload
 (when load-file-name
