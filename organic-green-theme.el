@@ -24,8 +24,6 @@
 
 ;;; Code:
 
-(make-face 'mode-line-default-face)
-(make-face 'mode-line-header)
 (make-face 'tcl-substitution-char-face)
 
 (deftheme organic-green
@@ -70,9 +68,6 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(default ((,class (:foreground ,organic-fg :background ,organic-bg))))
    `(cursor ((,class (:background ,organic-cursor-fg))))
    `(hl-line ((,class (:background "#A0F0A0" :inverse-video nil))))
-
-   `(mode-line-default-face ((,class (:foreground ,organic-fg))))
-   `(mode-line-header ((t (:foreground "gray25" :weight bold))))
 
    ;; Highlighting faces
    `(fringe ((,class (:background "#E5E5E5" :foreground "gray40"))))
@@ -300,6 +295,8 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(diredp-dir-name ((t (:foreground ,alum-6))))
    `(diredp-file-name ((t (:foreground ,organic-fg))))
    `(diredp-file-suffix ((t (:foreground ,organic-builtin-fg))))
+   ;; dired+
+   `(diredp-compressed-file-suffix ((t (:foreground ,orange-3))))
 
    ;;Highlight pair parentheses
    `(show-paren-match ((t (:background "#F0F0A1"))))
