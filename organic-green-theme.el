@@ -159,6 +159,11 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(scala-font-lock:var-face ((t (:foreground ,orange-3))))
    `(ensime-result-overlay-face ((t (:background ,organic-bg :foreground ,organic-comment-fg :box (:line-width -1 :color "#F0F0A1")))))
 
+   ;; lsp
+   `(lsp-ui-doc-border ((t (:background "#E5E5E5"))))
+   `(lsp-ui-doc-background ((t (:background ,tiny-green-highlight-background))))
+   `(lsp-ui-sideline-code-action ((t (:background ,tiny-green-highlight-background :foreground ,organic-comment-fg))))
+
    ;; Tcl
    '(tcl-substitution-char-face ((t (:foreground "OliveDrab4"))))
 
