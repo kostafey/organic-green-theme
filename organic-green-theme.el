@@ -208,6 +208,9 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
    `(whitespace-space-before-tab ((t (:background ,organic-bg :foreground ,alum-3))) t)
    `(whitespace-trailing ((t (:background ,organic-bg :foreground ,plum-1))) t)
 
+   ;; ace-jump
+   `(ace-jump-face-foreground ((t (:foreground "red" :underline nil))) t)
+
    ;; diff
    '(diff-indicator-added ((t (:foreground "#339933"))) t)
    '(diff-added ((t (:foreground "#339933"))) t)
