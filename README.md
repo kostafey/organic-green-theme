@@ -14,7 +14,7 @@ Then in your emacs config somewhere:
 (load-theme 'organic-green t)
 ```
 
-You can set all fonts for editing from bold to normal
+You can set all fonts for editing from bold to normal:
 ```lisp
 (setq organic-green-boldless t)
 ```
