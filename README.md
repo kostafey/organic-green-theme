@@ -14,12 +14,17 @@ Then in your emacs config somewhere:
 (load-theme 'organic-green t)
 ```
 
+You can set all fonts for editing from bold to normal
+```lisp
+(setq organic-green-boldless t)
+```
+
 ## Screenshots
 
 <img src="http://i.imgur.com/GXoUtD6.png" width="800" />
 
 ## License
 
-Copyright © 2009-2019 Kostafey <kostafey@gmail.com>
+Copyright © 2009-2020 Kostafey <kostafey@gmail.com>
 
 Distributed under the General Public License 2.0+

@@ -1,6 +1,6 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
 
-;;; Copyright © 2009-2019 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2020 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -34,57 +34,75 @@
 (deftheme organic-green
   "Low-contrast green color theme.
 Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
-(labels ((organic-green-bold (bold-factor)
-                             (if organic-green-boldless
-                                 'normal
-                               (or bold-factor 'bold))))
+(labels ((set-bold (bold-factor) (if organic-green-boldless
+                                     'normal
+                                   (or bold-factor 'bold))))
   (let* ((class '((class color) (min-colors 89)))
-         ;; Organic-green misc palette colors.
-         (geep-sea-green "#339966")
-         (sea-eye        "#00A86B")
-         (cham-3         "#4e9a06")
-         (blue-0         "#8cc4ff")
-         (blue-2         "#3465a4")
-         (blue-3         "#204a87")
-         (orange-3       "#ce5c00")
+         ;; basic colors
+         (organic-fg                    "#326B6B")
+         (organic-bg                    "#F0FFF0")
+         (organic-cursor-fg             "#225522")
+
+         ;; palette colors
+         (organic-grass-green          "#119911")
+         (organic-spring-green         "#008B45")
+         (organic-sea-eye-green        "#00A86B")
+         (organic-success-green        "#4e9a06")
+         (organic-teal                 "#009292")
+         (organic-olive                "#6E8B3D")
+
+         (organic-blue                 "#3063EA")
+         (organic-flx-blue             "#0066CC")
+         (organic-dodger-blue          "#1874CD")
+         (organic-light-blue           "#8cc4ff")
+         (organic-medium-blue          "#3465BD")
+         (organic-dark-blue            "#204a87")
+         (organic-cornflower-blue      "#4045F0")
+
+         (organic-purple (if organic-green-boldless "#912CEE" "#A020F0"))
+         (organic-yellow               "#B8860B")
+         (organic-dark-yellow          "#8B6508")
+         (organic-orange               "#CE5C00")
+         (organic-error-red            "#A40000")
+
+         (organic-gray                 "gray50")
+         (organic-dark-gray            "grey28")
+
          (alum-1         "#eeeeec")
          (alum-2         "#d3d7cf")
          (alum-3         "#babdb6")
          (alum-6         "#2e3436")
-         (plum-1         "#ad7fa8")
+
          (red-1          "#ef2929")
          (red-2          "#cc0000")
-         (red-3          "#a40000")
 
-         ;; basic colors
-         (organic-fg "#326B6B")
-         (organic-bg "#F0FFF0")
-         (organic-cursor-fg "#225522")
-         (organic-comment-fg "gray50")
-         (organic-string-fg "#119911")
-         (organic-constant-fg "#3465BD")
-         (organic-builtin-fg "#009292")
-         (minor-green-highlight-background "#D5F0D5")
-         (tiny-green-highlight-background "#E3FFE1")
-         (minor-grey-highlight-background "#DAEADA")
-         (minor-yellow-highlight-background "#F2FFC0") ;#E3F2A1
-         (minor-blue-highlight-background "#C0E0FF")
-         (minor-red-highlight-background "#FFF0F0"))
+         (organic-pair-yellow            "#F0F0A1")
+         (organic-highlight-yellow       "#EEEEA0")
+         (organic-highlight-lazy-yellow  "#DDEE00")
+         (organic-highlight-green        "#A0F0A0")
+         (organic-highlight-yellow-green "#BFFF00")
+
+         (organic-minor-highlight-green  "#D5F0D5")
+         (organic-tiny-highlight-green   "#E3FFE1")
+         (organic-minor-highlight-grey   "#DAEADA")
+         (organic-tiny-highlight-grey    "#E3F2E1")
+         (organic-minor-highlight-yellow "#F2FFC0")
+         (organic-minor-highlight-red    "#FFF0F0"))
 
     (custom-theme-set-faces
      'organic-green
      `(default ((,class (:foreground ,organic-fg :background ,organic-bg))))
      `(cursor ((,class (:background ,organic-cursor-fg))))
-     `(hl-line ((,class (:background "#A0F0A0" :inverse-video nil))))
+     `(hl-line ((,class (:background ,organic-highlight-green :inverse-video nil))))
 
      ;; Highlighting faces
      `(fringe ((,class (:background "#E5E5E5" :foreground "gray40"))))
-     `(highlight ((,class (:background ,minor-green-highlight-background))))
-     `(region ((,class (:foreground ,organic-fg :background ,"#EEEEA0"))))
-     `(cua-rectangle ((,class (:foreground ,organic-fg :background ,"#BFFF00"))))
-     `(secondary-selection ((,class (:background ,blue-0))))
+     `(highlight ((,class (:background ,organic-minor-highlight-green))))
+     `(region ((,class (:background ,organic-highlight-yellow))))
+     `(cua-rectangle ((,class (:background ,organic-highlight-yellow-green))))
+     `(secondary-selection ((,class (:background ,organic-light-blue))))
      `(isearch ((,class (:foreground ,organic-fg :background "yellow" :inverse-video nil))))
-     `(lazy-highlight ((,class (:background "#DDEE00" :inverse-video nil))))
+     `(lazy-highlight ((,class (:background ,organic-highlight-lazy-yellow :inverse-video nil))))
      `(trailing-whitespace ((,class (:background ,red-1))))
 
      ;; Mode line faces
@@ -94,26 +112,26 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
                                          :background ,alum-1 :foreground ,alum-6))))
 
      ;; Escape and prompt faces
-     `(minibuffer-prompt ((,class (:weight bold :foreground ,blue-3))))
-     `(escape-glyph ((,class (:foreground ,sea-eye))))
-     `(error ((,class (:foreground ,red-3 :weight ,(organic-green-bold 'bold)))))
-     `(warning ((,class (:foreground ,orange-3))))
-     `(success ((,class (:foreground ,cham-3))))
+     `(minibuffer-prompt ((,class (:weight bold :foreground ,organic-dark-blue))))
+     `(escape-glyph ((,class (:foreground ,organic-sea-eye-green))))
+     `(error ((,class (:foreground ,organic-error-red :weight ,(set-bold 'bold)))))
+     `(warning ((,class (:foreground ,organic-orange))))
+     `(success ((,class (:foreground ,organic-success-green))))
 
      ;; Font lock faces
-     `(font-lock-builtin-face ((,class (:foreground ,organic-builtin-fg))))
-     `(font-lock-comment-face ((,class (:foreground ,organic-comment-fg))))
-     `(font-lock-constant-face ((,class (:foreground ,organic-constant-fg))))
-     `(font-lock-function-name-face ((,class (:weight ,(organic-green-bold 'extra-bold) :foreground "#3063EA")))) ;"blue" "#1155CF" "#3032FF" "#3063EA"
-     `(font-lock-keyword-face ((,class (:weight ,(organic-green-bold 'semi-bold) :foreground "#9538EA")))) ; "purple" "#9538EA"
-     `(font-lock-string-face ((t (:foreground ,organic-string-fg))) t) ; "ForestGreen"
-     `(font-lock-type-face ((t (:foreground ,organic-builtin-fg :weight ,(organic-green-bold 'bold)))))
-     `(font-lock-variable-name-face ((,class (:width condensed :foreground "DarkGoldenrod"))))
-     `(font-lock-warning-face ((,class (:foreground "#AA0000" :weight ,(organic-green-bold 'bold)))))
+     `(font-lock-builtin-face ((,class (:foreground ,organic-teal))))
+     `(font-lock-comment-face ((,class (:foreground ,organic-gray))))
+     `(font-lock-constant-face ((,class (:foreground ,organic-medium-blue))))
+     `(font-lock-function-name-face ((,class (:weight ,(set-bold 'extra-bold) :foreground ,organic-blue))))
+     `(font-lock-keyword-face ((,class (:weight ,(set-bold 'semi-bold) :foreground ,organic-purple))))
+     `(font-lock-string-face ((t (:foreground ,organic-grass-green))) t)
+     `(font-lock-type-face ((t (:foreground ,organic-teal :weight ,(set-bold 'bold)))))
+     `(font-lock-variable-name-face ((,class (:width condensed :foreground ,organic-yellow))))
+     `(font-lock-warning-face ((,class (:foreground ,organic-error-red :weight ,(set-bold 'bold)))))
 
      ;; Button and link faces
-     `(link ((,class (:underline t :foreground ,blue-3))))
-     `(link-visited ((,class (:underline t :foreground ,blue-2))))
+     `(link ((,class (:underline t :foreground ,organic-dark-blue))))
+     `(link-visited ((,class (:underline t :foreground ,organic-medium-blue))))
 
      ;; Jabber
      '(jabber-roster-user-chatty ((t (:inherit font-lock-type-face :bold tx))))
@@ -139,70 +157,69 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      ;; LaTeX
      '(font-latex-bold-face ((t (:bold t :foreground "DarkOliveGreen"))))
      '(font-latex-italic-face ((t (:italic t :foreground "DarkOliveGreen"))))
-     '(font-latex-math-face ((t (:foreground "DarkGoldenrod"))))
+     `(font-latex-math-face ((t (:foreground organic-yellow))))
      '(font-latex-sedate-face ((t (:foreground "DimGray"))))
      '(font-latex-string-face ((t (nil))))
-     '(font-latex-warning-face ((t (:bold t :weight semi-bold :foreground "#00CC00"))))
+     '(font-latex-warning-face ((t (:bold t :weight semi-bold :foreground ,organic-orange))))
 
      ;; quack
-     '(quack-pltish-paren-face ((((class color) (background light)) (:foreground "#53AD2F"))))
-     '(quack-pltish-keyword-face ((t (:foreground "#A020F0" :weight bold))))
+     `(quack-pltish-paren-face ((((class color) (background light)) (:foreground ,organic-sea-eye-green))))
+     `(quack-pltish-keyword-face ((t (:foreground ,organic-purple :weight bold))))
 
      ;; js2-mode
-     '(js2-external-variable ((t (:foreground "DodgerBlue3"))))
-     `(js2-function-param ((t (:foreground ,organic-builtin-fg)))) ;"SeaGreen" ,sea-eye
+     `(js2-external-variable ((t (:foreground ,organic-dodger-blue))))
+     `(js2-function-param ((t (:foreground ,organic-teal))))
 
      ;; clojure/CIDER
-     `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color "#F0F0A1")))))
+     `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color ,organic-pair-yellow)))))
 
      ;; java
-     `(jdee-java-properties-font-lock-comment-face ((t (:foreground ,organic-comment-fg))))
-     '(jdee-java-properties-font-lock-equal-face ((t (:foreground "DodgerBlue3"))))
+     `(jdee-java-properties-font-lock-comment-face ((t (:foreground ,organic-gray))))
+     '(jdee-java-properties-font-lock-equal-face ((t (:foreground ,organic-dodger-blue))))
      '(jdee-java-properties-font-lock-substitution-face ((t (:inherit font-lock-function-name-face :bold nil))))
      '(jdee-java-properties-font-lock-class-name-face ((t (:inherit font-lock-constant-face :bold nil))))
      '(jdee-java-properties-font-lock-value-face ((t (:inherit font-lock-string-face :bold nil))))
-     `(jdee-java-properties-font-lock-backslash-face ((t (:foreground ,sea-eye))))
+     `(jdee-java-properties-font-lock-backslash-face ((t (:foreground ,organic-sea-eye-green))))
 
      ;; scala
-     `(scala-font-lock:var-face ((t (:foreground ,orange-3))))
-     `(ensime-result-overlay-face ((t (:background ,organic-bg :foreground ,organic-comment-fg :box (:line-width -1 :color "#F0F0A1")))))
+     `(scala-font-lock:var-face ((t (:foreground ,organic-orange))))
 
      ;; lsp
      `(lsp-ui-doc-border ((t (:background "#E5E5E5"))))
-     `(lsp-ui-doc-background ((t (:background ,tiny-green-highlight-background))))
-     `(lsp-ui-sideline-code-action ((t (:background ,tiny-green-highlight-background :foreground ,organic-comment-fg))))
+     `(lsp-ui-doc-background ((t (:background ,organic-tiny-highlight-green))))
+     `(lsp-ui-sideline-code-action ((t (:background ,organic-tiny-highlight-green :foreground ,organic-gray))))
 
      ;; Tcl
-     '(tcl-substitution-char-face ((t (:foreground "OliveDrab4"))))
+     `(tcl-substitution-char-face ((t (:foreground ,organic-olive))))
 
      ;; erc
      '(erc-action-face ((t (:foreground "gray" :weight bold))))
-     '(erc-command-indicator-face ((t (:foreground "black" :weight bold))))
-     '(erc-nick-default-face ((t (:foreground "SlateBlue" :weight bold))))
-     '(erc-input-face ((t (:foreground "#000099"))))
+     '(erc-command-indicator-face ((t (:foreground ,organic-dark-gray :weight bold))))
+     '(erc-nick-default-face ((t (:foreground ,organic-purple :weight bold))))
+     '(erc-input-face ((t (:foreground ,organic-dark-blue))))
      '(erc-notice-face ((t (:foreground "dark sea green" :weight bold))))
-     '(erc-timestamp-face ((t (:foreground "#32CD32" :weight bold))))
+     '(erc-timestamp-face ((t (:foreground ,organic-grass-green :weight bold))))
 
      ;; circe
      '(circe-server-face ((t (:foreground "dark sea green"))))
-     '(circe-prompt-face ((t (:foreground "gray25" :background "LightSeaGreen" :weight bold))))
-     '(lui-time-stamp-face ((t (:foreground "#32CD32"))))
-     '(circe-highlight-nick-face ((t (:foreground "DarkTurquoise")))) ;"#0445b7"
+     '(circe-prompt-face ((t (:foreground ,organic-dark-gray :background ,organic-minor-highlight-green :weight bold))))
+     '(circe-highlight-nick-face ((t (:foreground ,organic-orange))))
+     '(lui-time-stamp-face ((t (:foreground ,organic-grass-green))))
 
      ;; rst
      '(rst-definition ((t (:inherit font-lock-constant-face))) t)
-     `(rst-level-1 ((t (:background ,minor-green-highlight-background))) t)
-     `(rst-level-2 ((t (:background ,minor-grey-highlight-background))))
-     `(rst-level-3 ((t (:background ,minor-grey-highlight-background))))
-     `(rst-level-4 ((t (:background ,minor-grey-highlight-background))))
-     `(rst-level-5 ((t (:background ,minor-grey-highlight-background))))
-     `(rst-level-6 ((t (:background ,minor-grey-highlight-background))))
+     `(rst-level-1 ((t (:background ,organic-minor-highlight-green))) t)
+     `(rst-level-2 ((t (:background ,organic-minor-highlight-grey))))
+     `(rst-level-3 ((t (:background ,organic-minor-highlight-grey))))
+     `(rst-level-4 ((t (:background ,organic-minor-highlight-grey))))
+     `(rst-level-5 ((t (:background ,organic-minor-highlight-grey))))
+     `(rst-level-6 ((t (:background ,organic-minor-highlight-grey))))
      '(rst-block ((t (:inherit font-lock-function-name-face :bold t))) t)
      '(rst-external ((t (:inherit font-lock-constant-face))) t)
      '(rst-directive ((t (:inheit font-lock-builtin-face))) t)
      '(rst-literal ((t (:inheit font-lock-string-face))))
      '(rst-emphasis1 ((t (:inherit italic))) t)
-     `(rst-adornment ((t (:bold t :foreground ,blue-2))))
+     `(rst-adornment ((t (:bold t :foreground ,organic-medium-blue))))
 
      ;; whitespace-mode
      `(whitespace-empty ((t (:background ,organic-bg :foreground ,alum-3))) t)
@@ -214,7 +231,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      `(whitespace-line ((t (:background ,organic-bg :foreground ,alum-3))) t)
      `(whitespace-space ((t (:background ,organic-bg :foreground ,alum-3))) t)
      `(whitespace-space-before-tab ((t (:background ,organic-bg :foreground ,alum-3))) t)
-     `(whitespace-trailing ((t (:background ,organic-bg :foreground ,plum-1))) t)
+     `(whitespace-trailing ((t (:background ,organic-bg :foreground ,organic-error-red))) t)
 
      ;; log4j
      `(log4j-font-lock-warn-face ((t (:inherit warning))))
@@ -236,45 +253,43 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      `(magit-diff-added-highlight ((t (:foreground "#22aa22" :background "#cceecc"))) t)
      `(magit-diff-removed-highlight ((t (:foreground "#aa2222" :background "#eecccc"))) t)
      `(magit-diff-context-highlight ((t (:background ,organic-bg :foreground "grey50"))) t)
-     `(magit-diff-file-heading-highlight ((t (:background ,minor-green-highlight-background))) t)
-     '(magit-item-highlight ((t (:background "#E3F2E1"))) t)
-     '(magit-log-author ((t (:foreground "SpringGreen4"))) t)
-     '(magit-popup-argument ((t (:foreground "#3032FF"))) t)
-     `(magit-process-ok ((t (:foreground ,organic-string-fg))) t)
-     `(magit-section-highlight ((t (:background ,minor-green-highlight-background))) t)
-     '(magit-branch-remote ((t (:foreground "DarkOliveGreen4"))) t)
-     '(magit-section-heading ((t (:bold t :foreground "DarkGoldenrod4"))) t)
+     `(magit-diff-file-heading-highlight ((t (:background ,organic-minor-highlight-green))) t)
+     `(magit-item-highlight ((t (:background ,organic-tiny-highlight-grey))) t)
+     `(magit-log-author ((t (:foreground ,organic-spring-green))) t)
+     `(magit-popup-argument ((t (:foreground ,organic-blue))) t)
+     `(magit-process-ok ((t (:foreground ,organic-grass-green))) t)
+     `(magit-section-highlight ((t (:background ,organic-minor-highlight-green))) t)
+     `(magit-branch-remote ((t (:foreground ,organic-olive))) t)
+     `(magit-section-heading ((t (:bold t :foreground ,organic-dark-yellow))) t)
 
      ;; git-gutter
      '(git-gutter:added ((t (:foreground "#339933"))) t)
      `(git-gutter:deleted ((t (:foreground ,red-2))) t)
-     '(git-gutter:modified ((t (:foreground "DodgerBlue3"))) t)
+     `(git-gutter:modified ((t (:foreground ,organic-dodger-blue))) t)
 
      `(git-gutter-fr:added ((t (:foreground "PaleGreen3" :background "PaleGreen3"))) t)
      `(git-gutter-fr:deleted ((t (:foreground "tomato1" :background "tomato1"))) t)
      `(git-gutter-fr:modified ((t (:foreground "LightSkyBlue3" :background "LightSkyBlue3"))) t)
 
      ;; org-mode
-     `(org-table ((t (:foreground ,organic-builtin-fg))) t)
+     `(org-table ((t (:foreground ,organic-teal))) t)
      `(org-level-1 ((t (:inherit font-lock-function-name-face :bold t))) t)
      `(org-level-2 ((t (:inherit font-lock-variable-name-face :bold t))) t)
      `(org-level-3 ((t (:inherit font-lock-keyword-face :bold t))) t)
-     `(org-level-4 ((t (:foreground ,sea-eye :bold t))) t)
-     `(org-level-5 ((t (:foreground  ,blue-2 :bold t))) t)
-     `(org-level-6 ((t (:foreground "LightSeaGreen" :bold t))) t)
+     `(org-level-4 ((t (:foreground ,organic-sea-eye-green :bold t))) t)
+     `(org-level-5 ((t (:foreground  ,organic-medium-blue :bold t))) t)
+     `(org-level-6 ((t (:foreground ,organic-teal :bold t))) t)
      `(org-block ((,class (:foreground ,organic-fg))))
-     `(org-block-begin-line ((t (:foreground ,organic-constant-fg))) t)
-     `(org-block-end-line ((t (:foreground ,organic-constant-fg))) t)
+     `(org-block-begin-line ((t (:foreground ,organic-medium-blue))) t)
+     `(org-block-end-line ((t (:foreground ,organic-medium-blue))) t)
 
      ;; misc
-     '(nxml-element-local-name ((t (:foreground "#0066CC" :weight normal))) t)
-     '(speedbar-tag-face ((t (:foreground "DarkSlateGray4"))))
-     '(yas-field-highlight-face ((t (:background "#DDEE00"))))
-     `(idle-highlight ((t (:foreground ,organic-fg :background ,minor-yellow-highlight-background))) t)
-     `(comint-highlight-prompt ((t (:foreground ,organic-constant-fg :weight bold))) t)
-     `(speedbar-selected-face ((t (:foreground ,geep-sea-green :underline t))) t)
+     `(nxml-element-local-name ((t (:foreground ,organic-flx-blue :weight normal))) t)
+     `(yas-field-highlight-face ((t (:background ,organic-highlight-lazy-yellow))))
+     `(idle-highlight ((t (:background ,organic-minor-highlight-yellow))) t)
+     `(comint-highlight-prompt ((t (:foreground ,organic-medium-blue :weight bold))) t)
 
-     '(flx-highlight-face  ((t (:foreground "#0066CC" :bold t :underline t))) t)
+     `(flx-highlight-face  ((t (:foreground ,organic-flx-blue :bold t :underline t))) t)
 
      ;; powerline
      `(powerline-active1 ((t (:background ,alum-3 :inherit mode-line))) t)
@@ -283,6 +298,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      '(powerline-inactive2  ((t (:background "grey80" :inherit mode-line-inactive))) t)
 
      ;; tabbar
+     `(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color "gray72"))))
      `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
                                      :bold t
                                      :box (:line-width 1 :color "white"
@@ -294,31 +310,31 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
      ;; web-mode
      `(web-mode-current-element-highlight-face
-       ((,class (:background ,minor-green-highlight-background))))
-     '(web-mode-html-tag-face ((t (:foreground "grey28"))) t)
-     '(web-mode-html-attr-name-face ((t (:foreground "#4045F0"))) t)
-     `(web-mode-doctype-face ((t (:foreground ,organic-constant-fg))) t)
-     `(web-mode-comment-face ((t (:foreground ,organic-comment-fg))) t)
-     `(web-mode-css-selector-face ((t (:foreground ,organic-builtin-fg))) t)
+       ((,class (:background ,organic-minor-highlight-green))))
+     `(web-mode-html-tag-face ((t (:foreground ,organic-dark-gray))) t)
+     `(web-mode-html-attr-name-face ((t (:foreground ,organic-cornflower-blue))) t)
+     `(web-mode-doctype-face ((t (:foreground ,organic-medium-blue))) t)
+     `(web-mode-comment-face ((t (:foreground ,organic-gray)) t))
+     `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
      `(web-mode-function-call-face ((t :inherit organic-fg)))
      `(web-mode-function-name-face ((t :inherit font-lock-function-name-face)))
 
      `(eldoc-highlight-function-argument
-       ((t (:foreground ,organic-string-fg :weight bold))) t)
+       ((t (:foreground ,organic-grass-green :weight bold))) t)
 
-     `(table-cell ((t (:foreground ,organic-fg :background ,tiny-green-highlight-background))) t)
+     `(table-cell ((t (:foreground ,organic-fg :background ,organic-tiny-highlight-green))) t)
 
      ;; dired
-     `(diredp-dir-heading ((t (:background ,tiny-green-highlight-background))))
+     `(diredp-dir-heading ((t (:background ,organic-tiny-highlight-green))))
      `(diredp-dir-name ((t (:foreground ,alum-6))))
      `(diredp-file-name ((t (:foreground ,organic-fg))))
-     `(diredp-file-suffix ((t (:foreground ,organic-builtin-fg))))
+     `(diredp-file-suffix ((t (:foreground ,organic-teal))))
      ;; dired+
-     `(diredp-compressed-file-suffix ((t (:foreground ,orange-3))))
+     `(diredp-compressed-file-suffix ((t (:foreground ,organic-orange))))
 
      ;;Highlight pair parentheses
-     `(show-paren-match ((t (:background "#F0F0A1"))))
-     `(show-paren-mismatch ((t (:background ,minor-red-highlight-background))))
+     `(show-paren-match ((t (:background ,organic-pair-yellow))))
+     `(show-paren-mismatch ((t (:background ,organic-minor-highlight-red))))
 
      ;; rainbow-delimiters
      ;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
@@ -347,8 +363,8 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
  ;; marker
  `(highlight-symbol-colors
-   '("#EFFF00" "#73CD4F" "#83DDFF" "MediumPurple1" "#66CDAA"
-     "DarkOrange" "HotPink1" "#809FFF" "#ADFF2F"))
+   '("#FFF68F" "#ADFF2F" "#83DDFF" "#AB82FF" "#66CDAA"
+     "#FF8C00" "#FF6EB4" "#809FFF" "#9AFF9A"))
 
  ;; org-mode code blocks
  `(org-src-block-faces '(("emacs-lisp" (:background "#F0FFF0"))
