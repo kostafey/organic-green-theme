@@ -1,4 +1,5 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
+;; Package-Version: 20200418.0942
 
 ;;; Copyright © 2009-2020 - Kostafey <kostafey@gmail.com>
 
@@ -157,10 +158,10 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      ;; LaTeX
      '(font-latex-bold-face ((t (:bold t :foreground "DarkOliveGreen"))))
      '(font-latex-italic-face ((t (:italic t :foreground "DarkOliveGreen"))))
-     `(font-latex-math-face ((t (:foreground organic-yellow))))
+     `(font-latex-math-face ((t (:foreground ,organic-yellow))))
      '(font-latex-sedate-face ((t (:foreground "DimGray"))))
      '(font-latex-string-face ((t (nil))))
-     '(font-latex-warning-face ((t (:bold t :weight semi-bold :foreground ,organic-orange))))
+     `(font-latex-warning-face ((t (:bold t :weight semi-bold :foreground ,organic-orange))))
 
      ;; quack
      `(quack-pltish-paren-face ((((class color) (background light)) (:foreground ,organic-sea-eye-green))))
@@ -175,7 +176,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
      ;; java
      `(jdee-java-properties-font-lock-comment-face ((t (:foreground ,organic-gray))))
-     '(jdee-java-properties-font-lock-equal-face ((t (:foreground ,organic-dodger-blue))))
+     `(jdee-java-properties-font-lock-equal-face ((t (:foreground ,organic-dodger-blue))))
      '(jdee-java-properties-font-lock-substitution-face ((t (:inherit font-lock-function-name-face :bold nil))))
      '(jdee-java-properties-font-lock-class-name-face ((t (:inherit font-lock-constant-face :bold nil))))
      '(jdee-java-properties-font-lock-value-face ((t (:inherit font-lock-string-face :bold nil))))
@@ -185,7 +186,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      `(scala-font-lock:var-face ((t (:foreground ,organic-orange))))
 
      ;; lsp
-     `(lsp-ui-doc-border ((t (:background "#E5E5E5"))))
+     '(lsp-ui-doc-border ((t (:background "#E5E5E5"))))
      `(lsp-ui-doc-background ((t (:background ,organic-tiny-highlight-green))))
      `(lsp-ui-sideline-code-action ((t (:background ,organic-tiny-highlight-green :foreground ,organic-gray))))
 
@@ -194,17 +195,17 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
 
      ;; erc
      '(erc-action-face ((t (:foreground "gray" :weight bold))))
-     '(erc-command-indicator-face ((t (:foreground ,organic-dark-gray :weight bold))))
-     '(erc-nick-default-face ((t (:foreground ,organic-purple :weight bold))))
-     '(erc-input-face ((t (:foreground ,organic-dark-blue))))
+     `(erc-command-indicator-face ((t (:foreground ,organic-dark-gray :weight bold))))
+     `(erc-nick-default-face ((t (:foreground ,organic-purple :weight bold))))
+     `(erc-input-face ((t (:foreground ,organic-dark-blue))))
      '(erc-notice-face ((t (:foreground "dark sea green" :weight bold))))
-     '(erc-timestamp-face ((t (:foreground ,organic-grass-green :weight bold))))
+     `(erc-timestamp-face ((t (:foreground ,organic-grass-green :weight bold))))
 
      ;; circe
      '(circe-server-face ((t (:foreground "dark sea green"))))
-     '(circe-prompt-face ((t (:foreground ,organic-dark-gray :background ,organic-minor-highlight-green :weight bold))))
-     '(circe-highlight-nick-face ((t (:foreground ,organic-orange))))
-     '(lui-time-stamp-face ((t (:foreground ,organic-grass-green))))
+     `(circe-prompt-face ((t (:foreground ,organic-dark-gray :background ,organic-minor-highlight-green :weight bold))))
+     `(circe-highlight-nick-face ((t (:foreground ,organic-orange))))
+     `(lui-time-stamp-face ((t (:foreground ,organic-grass-green))))
 
      ;; rst
      '(rst-definition ((t (:inherit font-lock-constant-face))) t)
@@ -234,10 +235,10 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      `(whitespace-trailing ((t (:background ,organic-bg :foreground ,organic-error-red))) t)
 
      ;; log4j
-     `(log4j-font-lock-warn-face ((t (:inherit warning))))
+     '(log4j-font-lock-warn-face ((t (:inherit warning))))
 
      ;; ace-jump
-     `(ace-jump-face-foreground ((t (:foreground "red" :underline nil))) t)
+     '(ace-jump-face-foreground ((t (:foreground "red" :underline nil))) t)
 
      ;; diff
      '(diff-indicator-added ((t (:foreground "#339933"))) t)
@@ -248,10 +249,10 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      ;; magit
      '(magit-diff-add ((t (:foreground "#339933"))) t)
      `(magit-diff-del ((t (:foreground ,red-2))) t)
-     `(magit-diff-added ((t (:foreground "#22aa22" :background "#ddffdd"))) t)
-     `(magit-diff-removed ((t (:foreground "#aa2222" :background "#ffdddd"))) t)
-     `(magit-diff-added-highlight ((t (:foreground "#22aa22" :background "#cceecc"))) t)
-     `(magit-diff-removed-highlight ((t (:foreground "#aa2222" :background "#eecccc"))) t)
+     '(magit-diff-added ((t (:foreground "#22aa22" :background "#ddffdd"))) t)
+     '(magit-diff-removed ((t (:foreground "#aa2222" :background "#ffdddd"))) t)
+     '(magit-diff-added-highlight ((t (:foreground "#22aa22" :background "#cceecc"))) t)
+     '(magit-diff-removed-highlight ((t (:foreground "#aa2222" :background "#eecccc"))) t)
      `(magit-diff-context-highlight ((t (:background ,organic-bg :foreground "grey50"))) t)
      `(magit-diff-file-heading-highlight ((t (:background ,organic-minor-highlight-green))) t)
      `(magit-item-highlight ((t (:background ,organic-tiny-highlight-grey))) t)
@@ -267,15 +268,15 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      `(git-gutter:deleted ((t (:foreground ,red-2))) t)
      `(git-gutter:modified ((t (:foreground ,organic-dodger-blue))) t)
 
-     `(git-gutter-fr:added ((t (:foreground "PaleGreen3" :background "PaleGreen3"))) t)
-     `(git-gutter-fr:deleted ((t (:foreground "tomato1" :background "tomato1"))) t)
-     `(git-gutter-fr:modified ((t (:foreground "LightSkyBlue3" :background "LightSkyBlue3"))) t)
+     '(git-gutter-fr:added ((t (:foreground "PaleGreen3" :background "PaleGreen3"))) t)
+     '(git-gutter-fr:deleted ((t (:foreground "tomato1" :background "tomato1"))) t)
+     '(git-gutter-fr:modified ((t (:foreground "LightSkyBlue3" :background "LightSkyBlue3"))) t)
 
      ;; org-mode
      `(org-table ((t (:foreground ,organic-teal))) t)
-     `(org-level-1 ((t (:inherit font-lock-function-name-face :bold t))) t)
-     `(org-level-2 ((t (:inherit font-lock-variable-name-face :bold t))) t)
-     `(org-level-3 ((t (:inherit font-lock-keyword-face :bold t))) t)
+     '(org-level-1 ((t (:inherit font-lock-function-name-face :bold t))) t)
+     '(org-level-2 ((t (:inherit font-lock-variable-name-face :bold t))) t)
+     '(org-level-3 ((t (:inherit font-lock-keyword-face :bold t))) t)
      `(org-level-4 ((t (:foreground ,organic-sea-eye-green :bold t))) t)
      `(org-level-5 ((t (:foreground  ,organic-medium-blue :bold t))) t)
      `(org-level-6 ((t (:foreground ,organic-teal :bold t))) t)
@@ -298,15 +299,15 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      '(powerline-inactive2  ((t (:background "grey80" :inherit mode-line-inactive))) t)
 
      ;; tabbar
-     `(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color "gray72"))))
-     `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
+     '(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color "gray72"))))
+     '(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
                                      :bold t
                                      :box (:line-width 1 :color "white"
                                                        :style released-button)))))
      `(tabbar-selected ((t :inherit tabbar-default
                            :box (:line-width 1 :color "white" :style pressed-button)
                            :foreground ,alum-6 :bold t)))
-     `(tabbar-selected-modified ((t :inherit tabbar-selected)))
+     '(tabbar-selected-modified ((t :inherit tabbar-selected)))
 
      ;; web-mode
      `(web-mode-current-element-highlight-face
@@ -316,7 +317,7 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      `(web-mode-doctype-face ((t (:foreground ,organic-medium-blue))) t)
      `(web-mode-comment-face ((t (:foreground ,organic-gray)) t))
      `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
-     `(web-mode-function-call-face ((t :inherit organic-fg)))
+     `(web-mode-function-call-face ((t :inherit ,organic-fg)))
      `(web-mode-function-name-face ((t :inherit font-lock-function-name-face)))
 
      `(eldoc-highlight-function-argument
