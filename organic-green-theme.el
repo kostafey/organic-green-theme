@@ -237,6 +237,10 @@ Basic, Font Lock, Isearch, Jabber, rst, magit, Web faces are included.")
      ;; log4j
      '(log4j-font-lock-warn-face ((t (:inherit warning))))
 
+     ;; sh-mode
+     '(sh-heredoc ((t (:inherit font-lock-string-face))))
+     '(sh-quoted-exec ((t (:inherit font-lock-constant-face))))
+
      ;; ace-jump
      '(ace-jump-face-foreground ((t (:foreground "red" :underline nil))) t)
 
