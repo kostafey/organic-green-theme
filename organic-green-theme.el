@@ -167,6 +167,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(link ((,class (:underline t :foreground ,organic-blue-6))))
    `(link-visited ((,class (:underline t :foreground ,organic-blue-4))))
    `(highlight ((,class (:background ,organic-green-1))))
+   `(hl-line ((,class (:background ,organic-green-2 :inverse-video nil))))
    `(region ((,class (:background ,organic-yellow-1))))
    `(lazy-highlight ((,class (:background ,organic-yellow-2 :inverse-video nil))))
    `(isearch ((,class (:foreground ,organic-fg :background ,organic-yellow-3 :inverse-video nil))))
