@@ -89,6 +89,7 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-yellow-4  "#8B6508")
       (organic-yellow-5  "#B8860B")
 
+      (organic-yellow-green-0 "#BFFF00")
 
       (organic-purple    (if        organic-green-bold-constructs "#912CEE" "#A020F0"))
       (organic-orange    "#CE5C00")
@@ -165,11 +166,11 @@ The theme needs to be reloaded after changing anything in this group."
    `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-1 :foreground ,organic-alum-6))))
    `(link ((,class (:underline t :foreground ,organic-blue-6))))
    `(link-visited ((,class (:underline t :foreground ,organic-blue-4))))
-   `(highlight ((,class (:background ,organic-yellow-0))))
+   `(highlight ((,class (:background ,organic-green-1))))
    `(region ((,class (:background ,organic-yellow-1))))
    `(lazy-highlight ((,class (:background ,organic-yellow-2 :inverse-video nil))))
    `(isearch ((,class (:foreground ,organic-fg :background ,organic-yellow-3 :inverse-video nil))))
-   `(cua-rectangle ((,class (:background ,organic-yellow-1))))
+   `(cua-rectangle ((,class (:background ,organic-yellow-green-0))))
    `(secundary-selection ((,class (:background ,organic-blue-0))))
    `(trailing-whitespace ((,class (:background ,organic-red-3))))
 
