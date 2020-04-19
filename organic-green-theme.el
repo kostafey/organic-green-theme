@@ -358,7 +358,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(web-mode-doctype-face ((t (:foreground ,organic-blue-4))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-gray-4)) t))
    `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
-   `(web-mode-function-call-face ((t :inherit ,organic-fg)))
+   `(web-mode-function-call-face ((t (:foreground ,organic-fg))) t)
    `(web-mode-function-name-face ((t :inherit font-lock-function-name-face)))
 
    `(eldoc-highlight-function-argument
