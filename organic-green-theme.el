@@ -32,13 +32,8 @@
 The theme needs to be reloaded after changing anything in this group."
   :group 'faces)
 
-(defcustom organic-green-bold-constructs nil
-  "Use bold text in more code constructs."
-  :type 'boolean
-  :group 'organic-green)
-
-(defcustom organic-green-slanted-constructs nil
-  "Use slanted text in more code constructs (italics or oblique)."
+(defcustom organic-green-boldless nil
+  "Use bold text in less code constructs."
   :type 'boolean
   :group 'organic-green)
 
@@ -91,7 +86,7 @@ The theme needs to be reloaded after changing anything in this group."
 
       (organic-yellow-green-0 "#BFFF00")
 
-      (organic-purple    (if        organic-green-bold-constructs "#912CEE" "#A020F0"))
+      (organic-purple    (if organic-green-boldless "#912CEE" "#A020F0"))
       (organic-orange    "#CE5C00")
 
       (organic-red-0     "#FFF0F0")
@@ -123,15 +118,20 @@ The theme needs to be reloaded after changing anything in this group."
 
       ;; conditional styles that evaluate user-facing customization
       ;; options
-      (organic-green-slant
-       (if organic-green-slanted-constructs
-           'italic
-         'normal))
-
       (organic-green-bold
-       (if organic-green-bold-constructs
-           'bold
-         'normal)))
+       (if organic-green-boldless
+           'normal
+         'bold))
+
+      (organic-green-extra-bold
+       (if organic-green-boldless
+           'normal
+         'extra-bold))
+
+      (organic-green-semi-bold
+       (if organic-green-boldless
+           'normal
+         'semi-bold)))
 
   (custom-theme-set-faces
    'organic-green
@@ -143,19 +143,19 @@ The theme needs to be reloaded after changing anything in this group."
    `(extra-bold ((,class (:weight extra-bold))))
    `(semi-bold ((,class (:weight semi-bold))))
    `(italic ((,class (:slant italic))))
-   `(error ((,class (:foreground ,organic-red-6 :weight bold))))
+   `(error ((,class (:foreground ,organic-red-6 :weight ,organic-green-bold))))
    `(escape-glyph ((,class (:foreground ,organic-green-8))))
    `(warning ((,class (:foreground ,organic-orange))))
    `(success ((,class (:foreground ,organic-green-3))))
    `(font-lock-builtin-face ((,class (:foreground ,organic-teal))))
    `(font-lock-comment-face ((,class (:foreground ,organic-gray-4))))
    `(font-lock-constant-face ((,class (:foreground ,organic-blue-4))))
-   `(font-lock-function-name-face ((,class (:foreground ,organic-blue-2 :weight extra-bold))))
-   `(font-lock-keyword-face ((,class (:foreground ,organic-purple :weight semi-bold))))
+   `(font-lock-function-name-face ((,class (:foreground ,organic-blue-2 :weight ,organic-green-extra-bold))))
+   `(font-lock-keyword-face ((,class (:foreground ,organic-purple :weight ,organic-green-semi-bold))))
    `(font-lock-string-face ((t (:foreground ,organic-green-4))) t)
-   `(font-lock-type-face ((t (:foreground ,organic-teal :weight bold))))
+   `(font-lock-type-face ((t (:foreground ,organic-teal :weight ,organic-green-bold))))
    `(font-lock-variable-name-face ((,class (:foreground ,organic-yellow-5 :width condensed))))
-   `(font-lock-warning-face ((,class (:foreground ,organic-orange :weight bold))))
+   `(font-lock-warning-face ((,class (:foreground ,organic-orange :weight ,organic-green-bold))))
 
    ;; ui
    `(cursor ((,class (:background ,organic-cursor-fg))))
@@ -290,7 +290,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(diff-indicator-removed ((t (:foreground ,organic-red-5))) t)
    `(diff-removed ((t (:foreground ,organic-red-5))) T)
 
-   ;;; Magit
+   ;; magit <TODO>
    `(magit-diff-add ((t (:foreground ,organic-green-5))) t)
    `(magit-diff-del ((t (:foreground ,organic-red-5))) t)
    `(magit-diff-added ((t (:foreground ,organic-green-7 :background "#ddffdd"))) t)
