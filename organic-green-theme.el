@@ -56,26 +56,19 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-green-2   "#A0F0A0")
       (organic-green-3   "#4e9a06")
       (organic-green-4   "#119911")
-      (organic-green-5   "#339933")
+      (organic-green-5   "#118811")
       (organic-green-6   "#008B45")
       (organic-green-7   "#22aa22")
       (organic-green-8   "#00A86B")
       (organic-green-9   "dark sea green")
 
-      ;; #cceecc
-      ;; #ddffdd
-      ;; #118811
-      ;; PaleGreen3
-
-      (organic-blue-0    "#8cc4ff")
+      (organic-blue-0    "LightSkyBlue3")
       (organic-blue-1    "#1874CD")
       (organic-blue-2    "#3063EA")
       (organic-blue-3    "#0066CC")
       (organic-blue-4    "#3465BD")
       (organic-blue-5    "#4045F0")
       (organic-blue-6    "#204a87")
-
-      ;; LightSkyBlue3
 
       (organic-yellow-0  "#f2ffc0") ;
       (organic-yellow-1  "#F0F0A1")
@@ -92,12 +85,10 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-red-0     "#FFF0F0")
       (organic-red-1     "#ffdddd")
       (organic-red-2     "#eecccc")
-      (organic-red-3     "#ef2929")
+      (organic-red-3     "tomato1")
       (organic-red-4     "red")
       (organic-red-5     "#cc0000")
       (organic-red-6     "#A40000")
-
-      ;; tomato1
 
       (organic-alum-1    "#eeeeec")
       (organic-alum-2    "#d3d7cf")
@@ -111,10 +102,6 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-gray-4    "gray50")
       (organic-gray-5    "DimGray")
       (organic-gray-6    "gray28")
-
-      ;; gray70
-      ;; gray72
-      ;; gray80
 
       ;; conditional styles that evaluate user-facing customization
       ;; options
@@ -290,12 +277,12 @@ The theme needs to be reloaded after changing anything in this group."
    `(diff-indicator-removed ((t (:foreground ,organic-red-5))) t)
    `(diff-removed ((t (:foreground ,organic-red-5))) T)
 
-   ;; magit <TODO>
+   ;;; Magit
    `(magit-diff-add ((t (:foreground ,organic-green-5))) t)
    `(magit-diff-del ((t (:foreground ,organic-red-5))) t)
-   `(magit-diff-added ((t (:foreground ,organic-green-7 :background "#ddffdd"))) t)
+   `(magit-diff-added ((t (:foreground ,organic-green-7 :background ,organic-green-0))) t)
    `(magit-diff-removed ((t (:foreground ,organic-red-6 :background ,organic-red-1))) t)
-   `(magit-diff-added-highlight ((t (:foreground ,organic-green-7 :background "#cceecc"))) t)
+   `(magit-diff-added-highlight ((t (:foreground ,organic-green-7 :background ,organic-green-1))) t)
    `(magit-diff-removed-highlight ((t (:foreground ,organic-red-6 :background ,organic-red-2))) t)
    `(magit-diff-context-highlight ((t (:background ,organic-bg :foreground ,organic-gray-4))) t)
    `(magit-diff-file-heading-highlight ((t (:background ,organic-green-1))) t)
@@ -307,13 +294,13 @@ The theme needs to be reloaded after changing anything in this group."
    `(magit-branch-remote ((t (:foreground ,organic-olive-0))) t)
    `(magit-section-heading ((t (:bold t :foreground ,organic-yellow-5))) t)
 
-   ;; git-gutter  <TODO>
+   ;;; Git-Gutter
    `(git-gutter:added ((t (:foreground ,organic-green-5))) t)
    `(git-gutter:deleted ((t (:foreground ,organic-red-5))) t)
    `(git-gutter:modified ((t (:foreground ,organic-blue-1))) t)
-   '(git-gutter-fr:added ((t (:foreground "PaleGreen3" :background "PaleGreen3"))) t)
-   '(git-gutter-fr:deleted ((t (:foreground "tomato1" :background "tomato1"))) t)
-   '(git-gutter-fr:modified ((t (:foreground "LightSkyBlue3" :background "LightSkyBlue3"))) t)
+   `(git-gutter-fr:added ((t (:foreground ,organic-green-5 :background ,organic-green-5))) t)
+   `(git-gutter-fr:deleted ((t (:foreground ,organic-red-3 :background ,organic-red-3))) t)
+   `(git-gutter-fr:modified ((t (:foreground ,organic-blue-0 :background ,organic-blue-0))) t)
 
    ;;; Org-Mode
    `(org-table ((t (:foreground ,organic-teal))) t)
@@ -334,15 +321,15 @@ The theme needs to be reloaded after changing anything in this group."
    `(comint-highlight-prompt ((t (:foreground ,organic-blue-4 :weight bold))) t)
    `(flx-highlight-face  ((t (:foreground ,organic-blue-3 :bold t :underline t))) t)
 
-   ;; powerline <TODO>
+   ;;; Powerline
    `(powerline-active1 ((t (:background ,organic-alum-3 :inherit mode-line))) t)
    `(powerline-active2 ((t (:background ,organic-alum-2 :inherit mode-line))) t)
-   '(powerline-inactive1  ((t (:background "grey70" :inherit mode-line-inactive))) t)
-   '(powerline-inactive2  ((t (:background "grey80" :inherit mode-line-inactive))) t)
+   `(powerline-inactive1  ((t (:background ,organic-gray-3 :inherit mode-line-inactive))) t)
+   `(powerline-inactive2  ((t (:background ,organic-gray-3 :inherit mode-line-inactive))) t)
 
-   ;; tabbar <TODO>
-   '(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color "gray72"))))
-   `(tabbar-modified ((t (:inherit tabbar-default :foreground "#118811"
+   ;;; Tabbar
+   `(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color ,organic-gray-3))))
+   `(tabbar-modified ((t (:inherit tabbar-default :foreground ,organic-green-5
                                    :bold t
                                    :box (:line-width 1 :color ,organic-white
                                                      :style released-button)))))
