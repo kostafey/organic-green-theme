@@ -1,5 +1,4 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
-;; Package-Version: 20200418.0942
 
 ;;; Copyright © 2009-2020 - Kostafey <kostafey@gmail.com>
 
@@ -38,7 +37,7 @@ The theme needs to be reloaded after changing anything in this group."
   :group 'organic-green)
 
 (let ((class '((class color) (min-colors 89)))
-      (organic-fg "#326B6B")
+      (organic-fg        "#326B6B")
       (organic-bg        "#F0FFF0")
       (organic-cursor-fg "#225522")
       (organic-fringe-bg "#E5E5E5")
@@ -138,7 +137,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(font-lock-string-face ((t (:foreground ,organic-green-2))) t)
    `(font-lock-type-face ((t (:foreground ,organic-teal :weight ,organic-green-bold))))
    `(font-lock-variable-name-face ((,class (:foreground ,organic-yellow-4 :width condensed))))
-   `(font-lock-warning-face ((,class (:foreground ,organic-orange :weight ,organic-green-bold))))
+   `(font-lock-warning-face ((,class (:foreground ,organic-red-6 :weight ,organic-green-bold))))
 
    ;; ui
    `(cursor ((,class (:background ,organic-cursor-fg))))
@@ -151,7 +150,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(link-visited ((,class (:underline t :foreground ,organic-blue-4))))
    `(highlight ((,class (:background ,organic-green-0))))
    `(hl-line ((,class (:background ,organic-green-1 :inverse-video nil))))
-   `(region ((,class (:background ,organic-yellow-1))))
+   `(region ((,class (:background "#EEEEA0"))))
    `(lazy-highlight ((,class (:background ,organic-yellow-2 :inverse-video nil))))
    `(isearch ((,class (:foreground ,organic-fg :background ,organic-yellow-3 :inverse-video nil))))
    `(cua-rectangle ((,class (:background ,organic-yellow-green-0))))
@@ -276,10 +275,10 @@ The theme needs to be reloaded after changing anything in this group."
    ;;; Magit
    `(magit-diff-add ((t (:foreground ,organic-green-2)) t))
    `(magit-diff-del ((t (:foreground ,organic-red-5))) t)
-   `(magit-diff-added ((t (:foreground ,organic-green-3 :background ,organic-green-0))) t)
-   `(magit-diff-removed ((t (:foreground ,organic-red-6 :background ,organic-red-1))) t)
-   `(magit-diff-added-highlight ((t (:foreground ,organic-green-3 :background ,organic-green-0))) t)
-   `(magit-diff-removed-highlight ((t (:foreground ,organic-red-6 :background ,organic-red-2))) t)
+   `(magit-diff-added ((t (:foreground ,organic-green-3 :background "#ddffdd"))) t)
+   `(magit-diff-removed ((t (:foreground "#aa2222" :background ,organic-red-1))) t)
+   `(magit-diff-added-highlight ((t (:foreground ,organic-green-3 :background "#cceecc"))) t)
+   `(magit-diff-removed-highlight ((t (:foreground "#aa2222" :background ,organic-red-2))) t)
    `(magit-diff-context-highlight ((t (:background ,organic-bg :foreground ,organic-gray-4))) t)
    `(magit-diff-file-heading-highlight ((t (:background ,organic-green-0))) t)
    `(magit-item-highlight ((t (:background ,organic-gray-0))) t)
@@ -371,8 +370,22 @@ The theme needs to be reloaded after changing anything in this group."
    `(rainbow-delimiters-depth-6-face ((t (:foreground "#999900" :background ,organic-bg))))
    `(rainbow-delimiters-depth-7-face ((t (:foreground "#F57900" :background ,organic-bg))))
    `(rainbow-delimiters-depth-8-face ((t (:foreground "#EE66E8" :background ,organic-bg))))
-   `(rainbow-delimiters-depth-9-face ((t (:foreground "purple"  :background ,organic-bg))))
-   ))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground "purple"  :background ,organic-bg)))))
+
+  (custom-theme-set-variables
+   'organic-green
+
+   ;; fill-column-indicator
+   `(fci-rule-color "gray80")
+
+   ;; marker
+   `(highlight-symbol-colors
+     '("#FFF68F" "#ADFF2F" "#83DDFF" "#AB82FF" "#66CDAA"
+       "#FF8C00" "#FF6EB4" "#809FFF" "#9AFF9A"))
+
+   ;; org-mode code blocks
+   `(org-src-block-faces '(("emacs-lisp" (:background ,organic-bg))
+                           ("dot" (:foreground ,organic-gray-4))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
