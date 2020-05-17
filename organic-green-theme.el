@@ -58,12 +58,12 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-green-5   "#00A86B")
       (organic-green-6   "dark sea green")
 
-      (organic-blue-0    "LightSkyBlue3")
-      (organic-blue-1    "#1874CD")
-      (organic-blue-2    "#3063EA")
-      (organic-blue-3    "#0066CC")
-      (organic-blue-4    "#3465BD")
-      (organic-blue-5    "#8CC4FF")
+      (organic-blue-0    "#8CC4FF")
+      (organic-blue-1    "LightSkyBlue3")
+      (organic-blue-2    "#1874CD")
+      (organic-blue-3    "#3063EA")
+      (organic-blue-4    "#0066CC")
+      (organic-blue-5    "#3465BD")
       (organic-blue-6    "#204a87")
 
       (organic-yellow-0  "#F2FFC0")
@@ -133,8 +133,8 @@ The theme needs to be reloaded after changing anything in this group."
    `(success ((,class (:foreground ,organic-green-3))))
    `(font-lock-builtin-face ((,class (:foreground ,organic-teal))))
    `(font-lock-comment-face ((,class (:foreground ,organic-gray-4))))
-   `(font-lock-constant-face ((,class (:foreground ,organic-blue-4))))
-   `(font-lock-function-name-face ((,class (:foreground ,organic-blue-2 :weight ,organic-green-extra-bold))))
+   `(font-lock-constant-face ((,class (:foreground ,organic-blue-5))))
+   `(font-lock-function-name-face ((,class (:foreground ,organic-blue-3 :weight ,organic-green-extra-bold))))
    `(font-lock-keyword-face ((,class (:foreground ,organic-purple :weight ,organic-green-semi-bold))))
    `(font-lock-string-face ((t (:foreground ,organic-green-2))) t)
    `(font-lock-type-face ((t (:foreground ,organic-teal :weight ,organic-green-bold))))
@@ -149,14 +149,14 @@ The theme needs to be reloaded after changing anything in this group."
    `(mode-line ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-2 :foreground ,organic-alum-6))))
    `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-1 :foreground ,organic-alum-6))))
    `(link ((,class (:underline t :foreground ,organic-blue-6))))
-   `(link-visited ((,class (:underline t :foreground ,organic-blue-4))))
+   `(link-visited ((,class (:underline t :foreground ,organic-blue-5))))
    `(highlight ((,class (:background ,organic-green-0))))
    `(hl-line ((,class (:background ,organic-green-1 :inverse-video nil))))
    `(region ((,class (:background "#EEEEA0"))))
    `(lazy-highlight ((,class (:background ,organic-yellow-2 :inverse-video nil))))
    `(isearch ((,class (:foreground ,organic-fg :background ,organic-yellow-3 :inverse-video nil))))
    `(cua-rectangle ((,class (:background ,organic-yellow-green-0))))
-   `(secondary-selection ((,class (:background ,organic-blue-5))))
+   `(secondary-selection ((,class (:background ,organic-blue-0))))
    `(trailing-whitespace ((,class (:background ,organic-red-3))))
 
    ;; external packages
@@ -191,7 +191,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(quack-pltish-keyword-face ((t (:foreground ,organic-purple :weight bold))))
 
    ;;; js2-mode
-   `(js2-external-variable ((t (:foreground ,organic-blue-1))))
+   `(js2-external-variable ((t (:foreground ,organic-blue-2))))
    `(js2-function-param ((t (:foreground ,organic-teal))))
 
    ;; clojure/CIDER
@@ -199,7 +199,7 @@ The theme needs to be reloaded after changing anything in this group."
 
    ;;; Java
    `(jdee-java-properties-font-lock-comment-face ((t (:foreground ,organic-gray-4))))
-   `(jdee-java-properties-font-lock-equal-face ((t (:foreground ,organic-blue-1))))
+   `(jdee-java-properties-font-lock-equal-face ((t (:foreground ,organic-blue-2))))
    '(jdee-java-properties-font-lock-substitution-face ((t (:inherit font-lock-function-name-face :bold nil))))
    '(jdee-java-properties-font-lock-class-name-face ((t (:inherit font-lock-constant-face :bold nil))))
    '(jdee-java-properties-font-lock-value-face ((t (:inherit font-lock-string-face :bold nil))))
@@ -243,7 +243,7 @@ The theme needs to be reloaded after changing anything in this group."
    '(rst-directive ((t (:inheit font-lock-builtin-face))) t)
    '(rst-literal ((t (:inheit font-lock-string-face))))
    '(rst-emphasis1 ((t (:inherit italic))) t)
-   `(rst-adornment ((t (:bold t :foreground ,organic-blue-4))))
+   `(rst-adornment ((t (:bold t :foreground ,organic-blue-5))))
 
    ;; Whitespace-Mode
    `(whitespace-empty ((t (:background ,organic-bg :foreground ,organic-alum-3))) t)
@@ -284,7 +284,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(magit-diff-file-heading-highlight ((t (:background ,organic-green-0))) t)
    `(magit-item-highlight ((t (:background ,organic-gray-0))) t)
    `(magit-log-author ((t (:foreground ,organic-green-4))) t)
-   `(magit-popup-argument ((t (:foreground ,organic-blue-2))) t)
+   `(magit-popup-argument ((t (:foreground ,organic-blue-3))) t)
    `(magit-process-ok ((t (:foreground ,organic-green-2))) t)
    `(magit-section-highlight ((t (:background ,organic-green-0))) t)
    `(magit-branch-remote ((t (:foreground ,organic-olive-0))) t)
@@ -293,10 +293,10 @@ The theme needs to be reloaded after changing anything in this group."
    ;;; Git-Gutter
    `(git-gutter:added ((t (:foreground ,organic-green-2)) t))
    `(git-gutter:deleted ((t (:foreground ,organic-red-5))) t)
-   `(git-gutter:modified ((t (:foreground ,organic-blue-1))) t)
+   `(git-gutter:modified ((t (:foreground ,organic-blue-2))) t)
    `(git-gutter-fr:added ((t (:foreground ,organic-green-6 :background ,organic-green-6)) t))
    `(git-gutter-fr:deleted ((t (:foreground ,organic-red-3 :background ,organic-red-3))) t)
-   `(git-gutter-fr:modified ((t (:foreground ,organic-blue-0 :background ,organic-blue-0))) t)
+   `(git-gutter-fr:modified ((t (:foreground ,organic-blue-1 :background ,organic-blue-1))) t)
 
    ;;; Org-Mode
    `(org-table ((t (:foreground ,organic-teal))) t)
@@ -304,18 +304,18 @@ The theme needs to be reloaded after changing anything in this group."
    '(org-level-2 ((t (:inherit font-lock-variable-name-face :bold t))) t)
    '(org-level-3 ((t (:inherit font-lock-keyword-face :bold t))) t)
    `(org-level-4 ((t (:foreground ,organic-green-5 :bold t))) t)
-   `(org-level-5 ((t (:foreground  ,organic-blue-4 :bold t))) t)
+   `(org-level-5 ((t (:foreground  ,organic-blue-5 :bold t))) t)
    `(org-level-6 ((t (:foreground ,organic-teal :bold t))) t)
    `(org-block ((,class (:foreground ,organic-fg))))
-   `(org-block-begin-line ((t (:foreground ,organic-blue-4))) t)
-   `(org-block-end-line ((t (:foreground ,organic-blue-4))) t)
+   `(org-block-begin-line ((t (:foreground ,organic-blue-5))) t)
+   `(org-block-end-line ((t (:foreground ,organic-blue-5))) t)
 
    ;;; Misc
-   `(nxml-element-local-name ((t (:foreground ,organic-blue-3 :weight normal))) t)
+   `(nxml-element-local-name ((t (:foreground ,organic-blue-4 :weight normal))) t)
    `(yas-field-highlight-face ((t (:background ,organic-yellow-2))))
    `(idle-highlight ((t (:background ,organic-yellow-0))) t)
-   `(comint-highlight-prompt ((t (:foreground ,organic-blue-4 :weight bold))) t)
-   `(flx-highlight-face  ((t (:foreground ,organic-blue-3 :bold t :underline t))) t)
+   `(comint-highlight-prompt ((t (:foreground ,organic-blue-5 :weight bold))) t)
+   `(flx-highlight-face  ((t (:foreground ,organic-blue-4 :bold t :underline t))) t)
 
    ;;; Powerline
    `(powerline-active1 ((t (:background ,organic-alum-3 :inherit mode-line))) t)
@@ -325,7 +325,8 @@ The theme needs to be reloaded after changing anything in this group."
 
    ;;; Tabbar
    `(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color ,organic-gray-3))))
-   `(tabbar-modified ((t (:inherit tabbar-default :foreground ,organic-green-2                                   :bold t
+   `(tabbar-modified ((t (:inherit tabbar-default :foreground ,organic-green-2
+                                   :bold t
                                    :box (:line-width 1 :color ,organic-white
                                                      :style released-button)))))
    `(tabbar-selected ((t :inherit tabbar-default
@@ -337,7 +338,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(web-mode-current-element-highlight-face ((,class (:background ,organic-green-0))))
    `(web-mode-html-tag-face ((t (:foreground ,organic-gray-6))) t)
    `(web-mode-html-attr-name-face ((t (:foreground ,organic-cornflower))) t)
-   `(web-mode-doctype-face ((t (:foreground ,organic-blue-4))) t)
+   `(web-mode-doctype-face ((t (:foreground ,organic-blue-5))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-gray-4)) t))
    `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
    `(web-mode-function-call-face ((t (:foreground ,organic-fg))) t)
