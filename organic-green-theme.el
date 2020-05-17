@@ -71,21 +71,20 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-blue-2    "#3063EA")
       (organic-blue-3    "#0066CC")
       (organic-blue-4    "#3465BD")
-      (organic-blue-5    "#4045F0")
+      (organic-blue-5    "#8CC4FF")
       (organic-blue-6    "#204a87")
 
-      ;; LightSkyBlue3
-
-      (organic-yellow-0  "#f2ffc0") ;
+      (organic-yellow-0  "#F2FFC0")
       (organic-yellow-1  "#F0F0A1")
       (organic-yellow-2  "#DDEE00")
       (organic-yellow-3  "yellow")
-      (organic-yellow-4  "#8B6508")
-      (organic-yellow-5  "#B8860B")
+      (organic-yellow-4  "#B8860B")
+      (organic-yellow-5  "#8B6508")
 
       (organic-yellow-green-0 "#BFFF00")
 
       (organic-purple    (if organic-green-boldless "#912CEE" "#A020F0"))
+      (organic-cornflower "#4045F0")
       (organic-orange    "#CE5C00")
 
       (organic-red-0     "#FFF0F0")
@@ -171,9 +170,8 @@ The theme needs to be reloaded after changing anything in this group."
    `(lazy-highlight ((,class (:background ,organic-yellow-2 :inverse-video nil))))
    `(isearch ((,class (:foreground ,organic-fg :background ,organic-yellow-3 :inverse-video nil))))
    `(cua-rectangle ((,class (:background ,organic-yellow-green-0))))
-   `(secundary-selection ((,class (:background ,organic-blue-0))))
+   `(secondary-selection ((,class (:background ,organic-blue-5))))
    `(trailing-whitespace ((,class (:background ,organic-red-3))))
-
 
    ;; external packages
    ;;; Jabber
@@ -304,15 +302,15 @@ The theme needs to be reloaded after changing anything in this group."
    `(magit-process-ok ((t (:foreground ,organic-green-4))) t)
    `(magit-section-highlight ((t (:background ,organic-green-1))) t)
    `(magit-branch-remote ((t (:foreground ,organic-olive-0))) t)
-   `(magit-section-heading ((t (:bold t :foreground ,organic-yellow-4))) t)
+   `(magit-section-heading ((t (:bold t :foreground ,organic-yellow-5))) t)
 
    ;; git-gutter  <TODO>
    `(git-gutter:added ((t (:foreground ,organic-green-5))) t)
    `(git-gutter:deleted ((t (:foreground ,organic-red-5))) t)
    `(git-gutter:modified ((t (:foreground ,organic-blue-1))) t)
-   '(git-gutter-fr:added ((t (:foreground "PaleGreen3" :background "PaleGreen3"))) t)
-   '(git-gutter-fr:deleted ((t (:foreground "tomato1" :background "tomato1"))) t)
-   '(git-gutter-fr:modified ((t (:foreground "LightSkyBlue3" :background "LightSkyBlue3"))) t)
+   `(git-gutter-fr:added ((t (:foreground ,organic-green-6 :background ,organic-green-6)) t))
+   `(git-gutter-fr:deleted ((t (:foreground ,organic-red-3 :background ,organic-red-3))) t)
+   `(git-gutter-fr:modified ((t (:foreground ,organic-blue-0 :background ,organic-blue-0))) t)
 
    ;;; Org-Mode
    `(org-table ((t (:foreground ,organic-teal))) t)
@@ -353,7 +351,7 @@ The theme needs to be reloaded after changing anything in this group."
    ;;; Web-Mode
    `(web-mode-current-element-highlight-face ((,class (:background ,organic-green-1))))
    `(web-mode-html-tag-face ((t (:foreground ,organic-gray-6))) t)
-   `(web-mode-html-attr-name-face ((t (:foreground ,organic-blue-5))) t)
+   `(web-mode-html-attr-name-face ((t (:foreground ,organic-cornflower))) t)
    `(web-mode-doctype-face ((t (:foreground ,organic-blue-4))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-gray-4)) t))
    `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
