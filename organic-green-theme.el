@@ -90,7 +90,7 @@ The theme needs to be reloaded after changing anything in this group."
       (organic-alum-1    "#eeeeec")
       (organic-alum-2    "#d3d7cf")
       (organic-alum-3    "#babdb6")
-      (organic-alum-6    "#2e3436")
+      (organic-alum-4    "#2e3436")
 
       (organic-gray-0    "#E3F2E1")
       (organic-gray-1    "#DAEADA")
@@ -146,8 +146,8 @@ The theme needs to be reloaded after changing anything in this group."
    `(fringe ((,class (:background ,organic-fringe-bg :foreground ,organic-fringe-fg))))
    `(vertical-border ((,class (:foreground ,organic-fringe-fg))))
    `(minibuffer-prompt ((,class (:foreground ,organic-blue-6 :weight bold))))
-   `(mode-line ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-2 :foreground ,organic-alum-6))))
-   `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-1 :foreground ,organic-alum-6))))
+   `(mode-line ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-2 :foreground ,organic-alum-4))))
+   `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button) :background ,organic-alum-1 :foreground ,organic-alum-4))))
    `(link ((,class (:underline t :foreground ,organic-blue-6))))
    `(link-visited ((,class (:underline t :foreground ,organic-blue-5))))
    `(highlight ((,class (:background ,organic-green-0))))
@@ -331,7 +331,7 @@ The theme needs to be reloaded after changing anything in this group."
                                                      :style released-button)))))
    `(tabbar-selected ((t :inherit tabbar-default
                          :box (:line-width 1 :color ,organic-white :style pressed-button)
-                         :foreground ,organic-alum-6 :bold t)))
+                         :foreground ,organic-alum-4 :bold t)))
    '(tabbar-selected-modified ((t :inherit tabbar-selected)))
 
    ;;; Web-Mode
@@ -351,7 +351,7 @@ The theme needs to be reloaded after changing anything in this group."
 
    ;;; Dired
    `(diredp-dir-heading ((t (:background ,organic-green-0))))
-   `(diredp-dir-name ((t (:foreground ,organic-alum-6))))
+   `(diredp-dir-name ((t (:foreground ,organic-alum-4))))
    `(diredp-file-name ((t (:foreground ,organic-fg))))
    `(diredp-file-suffix ((t (:foreground ,organic-teal))))
 
