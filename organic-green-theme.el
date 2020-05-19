@@ -157,7 +157,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(isearch ((,class (:foreground ,organic-fg :background ,organic-yellow-3 :inverse-video nil))))
    `(cua-rectangle ((,class (:background ,organic-yellow-green-0))))
    `(secondary-selection ((,class (:background ,organic-blue-0))))
-   `(trailing-whitespace ((,class (:background ,organic-red-3))))
+   `(trailing-whitespace ((,class (:background ,organic-red-5))))
 
    ;; external packages
    ;;; Jabber
