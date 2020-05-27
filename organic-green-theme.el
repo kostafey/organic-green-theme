@@ -334,6 +334,13 @@ The theme needs to be reloaded after changing anything in this group."
                          :foreground ,organic-alum-4 :bold t)))
    '(tabbar-selected-modified ((t :inherit tabbar-selected)))
 
+   `(company-tooltip ((t :foreground ,organic-gray-6 :background ,organic-gray-0)))
+   `(company-tooltip-annotation ((t :foreground ,organic-fg)))
+   `(company-tooltip-common ((t :foreground ,organic-blue-4)))
+   `(company-echo-common ((t :foreground ,organic-cornflower)))
+   `(company-scrollbar-fg ((t :background ,organic-gray-4)))
+   `(company-scrollbar-bg ((t :background ,organic-gray-3)))
+
    ;;; Web-Mode
    `(web-mode-current-element-highlight-face ((,class (:background ,organic-green-0))))
    `(web-mode-html-tag-face ((t (:foreground ,organic-gray-6))) t)
