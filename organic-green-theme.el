@@ -193,6 +193,7 @@ The theme needs to be reloaded after changing anything in this group."
    ;;; js2-mode
    `(js2-external-variable ((t (:foreground ,organic-blue-2))))
    `(js2-function-param ((t (:foreground ,organic-teal))))
+   `(js2-jsdoc-value ((t (:foreground ,organic-yellow-5))))
 
    ;; clojure/CIDER
    `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color ,organic-yellow-1)))))
@@ -334,6 +335,7 @@ The theme needs to be reloaded after changing anything in this group."
                          :foreground ,organic-alum-4 :bold t)))
    '(tabbar-selected-modified ((t :inherit tabbar-selected)))
 
+   ;; Company
    `(company-tooltip ((t :foreground ,organic-gray-6 :background ,organic-gray-0)))
    `(company-tooltip-annotation ((t :foreground ,organic-fg)))
    `(company-tooltip-common ((t :foreground ,organic-blue-4)))
