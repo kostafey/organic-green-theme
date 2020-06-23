@@ -193,7 +193,9 @@ The theme needs to be reloaded after changing anything in this group."
    ;;; js2-mode
    `(js2-external-variable ((t (:foreground ,organic-blue-2))))
    `(js2-function-param ((t (:foreground ,organic-teal))))
-   `(js2-jsdoc-value ((t (:foreground ,organic-yellow-5))))
+   `(js2-jsdoc-type ((t (:foreground ,organic-blue-2))))
+   `(js2-jsdoc-tag ((t (:foreground ,organic-blue-5))))
+   `(js2-jsdoc-value ((t (:foreground ,organic-teal))))
 
    ;; clojure/CIDER
    `(cider-result-overlay-face ((t (:background ,organic-bg :box (:line-width -1 :color ,organic-yellow-1)))))
