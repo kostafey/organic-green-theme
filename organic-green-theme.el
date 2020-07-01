@@ -348,7 +348,7 @@ The theme needs to be reloaded after changing anything in this group."
    ;;; Web-Mode
    `(web-mode-current-element-highlight-face ((,class (:background ,organic-green-0))))
    `(web-mode-html-tag-face ((t (:foreground ,organic-gray-6))) t)
-   `(web-mode-html-attr-name-face ((t (:foreground ,organic-cornflower))) t)
+   `(web-mode-html-attr-name-face ((t (:foreground ,organic-blue-4))) t)
    `(web-mode-doctype-face ((t (:foreground ,organic-blue-5))) t)
    `(web-mode-comment-face ((t (:foreground ,organic-gray-4)) t))
    `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
