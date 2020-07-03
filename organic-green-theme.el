@@ -341,6 +341,8 @@ The theme needs to be reloaded after changing anything in this group."
    `(company-tooltip ((t :foreground ,organic-gray-6 :background ,organic-gray-0)))
    `(company-tooltip-annotation ((t :foreground ,organic-fg)))
    `(company-tooltip-common ((t :foreground ,organic-blue-4)))
+   `(company-tooltip-search ((t :background ,organic-yellow-1)))
+   `(company-tooltip-search-selection ((t :background ,organic-yellow-1)))
    `(company-echo-common ((t :foreground ,organic-cornflower)))
    `(company-scrollbar-fg ((t :background ,organic-gray-4)))
    `(company-scrollbar-bg ((t :background ,organic-gray-3)))
