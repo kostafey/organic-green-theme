@@ -303,12 +303,12 @@ The theme needs to be reloaded after changing anything in this group."
 
    ;;; Org-Mode
    `(org-table ((t (:foreground ,organic-teal))) t)
-   '(org-level-1 ((t (:inherit font-lock-function-name-face :bold t))) t)
-   '(org-level-2 ((t (:inherit font-lock-variable-name-face :bold t))) t)
-   '(org-level-3 ((t (:inherit font-lock-keyword-face :bold t))) t)
-   `(org-level-4 ((t (:foreground ,organic-green-5 :bold t))) t)
-   `(org-level-5 ((t (:foreground  ,organic-blue-5 :bold t))) t)
-   `(org-level-6 ((t (:foreground ,organic-teal :bold t))) t)
+   `(org-level-1 ((t (:inherit font-lock-function-name-face :weight ,organic-green-bold))) t)
+   `(org-level-2 ((t (:inherit font-lock-variable-name-face :weight ,organic-green-bold))) t)
+   `(org-level-3 ((t (:inherit font-lock-keyword-face :weight ,organic-green-bold))) t)
+   `(org-level-4 ((t (:foreground ,organic-green-5 :weight ,organic-green-bold))) t)
+   `(org-level-5 ((t (:foreground  ,organic-blue-5 :weight ,organic-green-bold))) t)
+   `(org-level-6 ((t (:foreground ,organic-teal :weight ,organic-green-bold))) t)
    `(org-block ((,class (:foreground ,organic-fg))))
    `(org-block-begin-line ((t (:foreground ,organic-blue-5))) t)
    `(org-block-end-line ((t (:foreground ,organic-blue-5))) t)
