@@ -191,7 +191,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(quack-pltish-keyword-face ((t (:foreground ,organic-purple :weight bold))))
 
    ;;; js2-mode
-   `(js2-external-variable ((t (:foreground ,organic-blue-2))))
+   `(js2-external-variable ((t (:inherit warning))))
    `(js2-function-param ((t (:foreground ,organic-teal))))
    `(js2-jsdoc-type ((t (:foreground ,organic-blue-2))))
    `(js2-jsdoc-tag ((t (:foreground ,organic-blue-5))))
