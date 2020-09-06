@@ -398,7 +398,6 @@ The theme needs to be reloaded after changing anything in this group."
    ;; marker
    `(highlight-symbol-colors
      '("#FFF68F"
-       "#EAFF8F"
        "#B7EB8F"
        "#76DDBA"
        "#91D5FF"
