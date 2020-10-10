@@ -389,6 +389,13 @@ The theme needs to be reloaded after changing anything in this group."
    `(rainbow-delimiters-depth-8-face ((t (:foreground "#EE66E8" :background ,organic-bg))))
    `(rainbow-delimiters-depth-9-face ((t (:foreground "purple"  :background ,organic-bg)))))
 
+  (custom-set-faces
+   ;; Multi-Magit
+   `(multi-magit-repo-heading ((t (:inherit magit-section-heading :box nil))))
+
+   ;; fill-column-indicator for `emacs-major-version' >= 27
+   `(fill-column-indicator ((t (:foreground "gray80" :weight normal)))))
+
   (custom-theme-set-variables
    'organic-green
 
