@@ -393,6 +393,9 @@ The theme needs to be reloaded after changing anything in this group."
    ;; Multi-Magit
    `(multi-magit-repo-heading ((t (:inherit magit-section-heading :box nil))))
 
+   ;; Speedbar
+   `(speedbar-selected-face ((t (:foreground ,organic-green-4 :underline t))))
+
    ;; fill-column-indicator for `emacs-major-version' >= 27
    `(fill-column-indicator ((t (:foreground "gray80" :weight normal)))))
 
