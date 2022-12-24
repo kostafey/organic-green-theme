@@ -56,28 +56,30 @@ The theme needs to be reloaded after changing anything in this group."
           (organic-highlight-blue   "#ACD7E5")
 
           (organic-dark-black       "#24292E")
-          (organic-black            "#2e3436")
+          (organic-black            "#2E3436")
+          (organic-green-black      "#444D56")
           (organic-dark-gray        "#5F5F5F")
+          (organic-medium-gray      "#666666")
           (organic-gray             "#7F7F7F")
           (organic-light-gray       "#B2BDB1")
-          (organic-dark-white       "#cccccc")
-          (organic-light-white      "#eeeeec")
+          (organic-dark-white       "#CCCCCC")
+          (organic-light-white      "#EEEEEC")
 
-          (organic-red             "#ef2929")
-          (organic-orange          "#ce5c00")
-          (organic-yellow          "#b8860b")
+          (organic-red             "#EF2929")
+          (organic-orange          "#CE5C00")
+          (organic-yellow          "#B8860B")
           (organic-sun             "#999900")
           (organic-green           "#119911")
           (organic-cyan            "#00A89B")
+          (organic-emerald         "#009A76")
           (organic-teal            "#0D7579")
           (organic-blue            "#0065CC")
           (organic-violet          "#5544EE")
           (organic-purple          "#912CEE")
-          (organic-magenta         "#d33682")
 
-          (organic-sign-add        "#27a745")
-          (organic-sign-change     "#2188ff")
-          (organic-sign-delete     "#d73a49")
+          (organic-sign-add        "#27A745")
+          (organic-sign-change     "#2188FF")
+          (organic-sign-delete     "#D73A49")
 
           (organic-marker-yellow   "#FFF68F")
           (organic-marker-green    "#B7EB8F")
@@ -89,8 +91,6 @@ The theme needs to be reloaded after changing anything in this group."
           (organic-marker-red      "#FFA39E")
           (organic-marker-orange   "#FFD591")
 
-          (organic-fringe-fg "gray40")
-          (organic-fill-column-indicator-fg "gray80")
           (organic-white-border "white"))
 
       (custom-theme-set-faces
@@ -107,6 +107,13 @@ The theme needs to be reloaded after changing anything in this group."
        `(escape-glyph ((,class (:foreground ,organic-sun))))
        `(warning ((,class (:foreground ,organic-orange))))
        `(success ((,class (:foreground ,organic-sun))))
+       `(compilation-info ((,class (:foreground ,organic-green))))
+       `(shadow ((,class (:foreground ,organic-gray))))
+       `(match ((,class (:foreground ,organic-yellow))))
+       `(menu ((,class (:foreground ,organic-violet))))
+       `(completions-annotations ((,class (:foreground ,organic-violet))))
+       `(completions-common-part ((,class (:foreground ,organic-blue :bold t :underline t))))       
+       `(completions-first-difference ((,class (:foreground ,organic-blue))))
        `(font-lock-builtin-face ((,class (:foreground ,organic-teal))))
        `(font-lock-comment-face ((,class (:foreground ,organic-gray))))
        `(font-lock-constant-face ((,class (:foreground ,organic-blue))))
@@ -122,7 +129,7 @@ The theme needs to be reloaded after changing anything in this group."
        `(cursor ((,class (:background ,organic-cursor-fg))))
        `(fringe ((,class (:background ,organic-highlight-gray :foreground ,organic-gray))))
        ;; TODO:
-       `(vertical-border ((,class (:foreground ,organic-fringe-fg))))
+       `(vertical-border ((,class (:foreground ,organic-medium-gray))))
        `(minibuffer-prompt ((,class (:foreground ,organic-blue :weight bold))))
        `(mode-line ((,class (:box (:line-width -1 :style released-button) :background ,organic-dark-white :foreground ,organic-dark-black))))
        `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button) :background ,organic-light-white :foreground ,organic-dark-black))))
@@ -211,6 +218,12 @@ The theme needs to be reloaded after changing anything in this group."
        `(circe-highlight-nick-face ((t (:foreground ,organic-orange))))
        `(lui-time-stamp-face ((t (:foreground ,organic-green))))
 
+       ;; Markdown
+       `(markdown-pre-face ((t (:foreground ,organic-green-black :family ,(face-attribute 'default :family)))))
+       `(markdown-markup-face ((t (:foreground ,organic-green-black :family ,(face-attribute 'default :family)))))
+       `(markdown-language-keyword-face ((t (:foreground ,organic-emerald :family ,(face-attribute 'default :family)))))
+       `(markdown-code-face ((t (:foreground ,organic-green :family ,(face-attribute 'default :family)))))
+
        ;; Rst
        '(rst-definition ((t (:inherit font-lock-constant-face))) t)
        `(rst-level-1 ((t (:background ,organic-purple))) t)
@@ -261,7 +274,7 @@ The theme needs to be reloaded after changing anything in this group."
        `(magit-diff-removed ((t (:foreground ,organic-sign-delete :background ,organic-bg))) t)
        `(magit-diff-added-highlight ((t (:foreground ,organic-green :background ,organic-cursor-bg))) t)
        `(magit-diff-removed-highlight ((t (:foreground ,organic-sign-delete :background ,organic-cursor-bg))) t)
-       `(magit-diff-context-highlight ((t (:foreground ,organic-black :background ,organic-cursor-bg))) t)
+       `(magit-diff-context-highlight ((t (:foreground ,organic-green-black :background ,organic-cursor-bg))) t)
        `(magit-diff-file-heading-highlight ((t (:background ,organic-cursor-bg))) t)
        `(magit-item-highlight ((t (:background ,organic-highlight-gray))) t)
        `(magit-log-author ((t (:foreground ,organic-sun))) t)
@@ -270,6 +283,8 @@ The theme needs to be reloaded after changing anything in this group."
        `(magit-section-highlight ((t (:background ,organic-cursor-bg))) t)
        `(magit-branch-remote ((t (:foreground ,organic-yellow))) t)
        `(magit-section-heading ((t (:bold nil :foreground ,organic-purple))) t)
+       `(magit-branch-local ((t (:foreground ,organic-yellow))) t)
+       `(magit-tag ((t (:foreground ,organic-sun))) t)
 
        ;; Git-Gutter
        `(git-gutter:added ((t (:foreground ,organic-green)) t))
@@ -329,13 +344,13 @@ The theme needs to be reloaded after changing anything in this group."
 
        ;; Web-Mode
        `(web-mode-current-element-highlight-face ((,class (:background ,organic-highlight-green))))
-       ;;        `(web-mode-html-tag-face ((t (:foreground ,organic-gray-6))) t)
-       ;;        `(web-mode-html-attr-name-face ((t (:foreground ,organic-blue-4))) t)
-       ;;        `(web-mode-doctype-face ((t (:foreground ,organic-blue-5))) t)
-       ;;        `(web-mode-comment-face ((t (:foreground ,organic-gray-4)) t))
-       ;;        `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
-       ;;        `(web-mode-function-call-face ((t (:foreground ,organic-fg))) t)
-       ;;        `(web-mode-function-name-face ((t :inherit font-lock-function-name-face)))
+       `(web-mode-html-tag-face ((t (:foreground ,organic-black))) t)
+       `(web-mode-html-attr-name-face ((t (:foreground ,organic-blue))) t)
+       `(web-mode-doctype-face ((t (:foreground ,organic-blue))) t)
+       `(web-mode-comment-face ((t (:foreground ,organic-gray)) t))
+       `(web-mode-css-selector-face ((t (:foreground ,organic-teal))) t)
+       `(web-mode-function-call-face ((t (:foreground ,organic-fg))) t)
+       `(web-mode-function-name-face ((t :inherit font-lock-function-name-face)))
 
        `(eldoc-highlight-function-argument
          ((t (:foreground ,organic-green :weight bold))) t)
@@ -357,7 +372,7 @@ The theme needs to be reloaded after changing anything in this group."
 
        ;; Rainbow-Delimiters
        ;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
-       `(rainbow-delimiters-depth-1-face ((t (:foreground "#666666" :background ,organic-bg))))
+       `(rainbow-delimiters-depth-1-face ((t (:foreground ,organic-medium-gray :background ,organic-bg))))
        `(rainbow-delimiters-depth-2-face ((t (:foreground ,organic-violet :background ,organic-bg))))
        `(rainbow-delimiters-depth-3-face ((t (:foreground ,organic-blue :background ,organic-bg))))
        `(rainbow-delimiters-depth-4-face ((t (:foreground ,organic-cyan :background ,organic-bg))))
@@ -375,22 +390,22 @@ The theme needs to be reloaded after changing anything in this group."
        `(speedbar-selected-face ((t (:foreground ,organic-green :underline t))))
 
        ;; fill-column-indicator for `emacs-major-version' >= 27
-       `(fill-column-indicator ((t (:foreground ,organic-fill-column-indicator-fg :weight normal)))))
+       `(fill-column-indicator ((t (:foreground ,organic-dark-white :weight normal)))))
 
       (custom-theme-set-variables
        'organic-green
 
        ;; marker
        `(highlight-symbol-colors
-         '("#FFF68F"
-           "#B7EB8F"
-           "#76DDBA"
-           "#91D5FF"
-           "#ADC6FF"
-           "#D3ADF7"
-           "#FFADD2"
-           "#FFA39E"
-           "#FFD591"))
+         '(,organic-marker-yellow
+           ,organic-marker-green
+           ,organic-marker-teal
+           ,organic-marker-blue
+           ,organic-marker-violet
+           ,organic-marker-purple
+           ,organic-marker-pink
+           ,organic-marker-red
+           ,organic-marker-orange))
 
        ;; org-mode code blocks
        `(org-src-block-faces '(("emacs-lisp" (:background ,organic-bg))
