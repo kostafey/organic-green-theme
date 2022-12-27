@@ -63,6 +63,7 @@ The theme needs to be reloaded after changing anything in this group."
           (organic-gray             "#7F7F7F")
           (organic-light-gray       "#B2BDB1")
           (organic-dark-white       "#CCCCCC")
+          (organic-shadow           "#D3E0D3")
           (organic-light-white      "#EEEEEC")
 
           (organic-red             "#EF2929")
@@ -89,9 +90,7 @@ The theme needs to be reloaded after changing anything in this group."
           (organic-marker-purple   "#D3ADF7")
           (organic-marker-pink     "#FFADD2")
           (organic-marker-red      "#FFA39E")
-          (organic-marker-orange   "#FFD591")
-
-          (organic-white-border "white"))
+          (organic-marker-orange   "#FFD591"))
 
       (custom-theme-set-faces
        'organic-green
@@ -111,7 +110,7 @@ The theme needs to be reloaded after changing anything in this group."
        `(shadow ((,class (:foreground ,organic-gray))))
        `(match ((,class (:foreground ,organic-yellow))))
        `(menu ((,class (:foreground ,organic-violet))))
-       `(completions-annotations ((,class (:foreground ,organic-violet))))
+       `(completions-annotations ((,class (:foreground ,organic-green))))
        `(completions-common-part ((,class (:foreground ,organic-blue :bold t :underline t))))       
        `(completions-first-difference ((,class (:foreground ,organic-blue))))
        `(font-lock-builtin-face ((,class (:foreground ,organic-teal))))
@@ -131,8 +130,8 @@ The theme needs to be reloaded after changing anything in this group."
        ;; TODO:
        `(vertical-border ((,class (:foreground ,organic-medium-gray))))
        `(minibuffer-prompt ((,class (:foreground ,organic-blue :weight bold))))
-       `(mode-line ((,class (:box (:line-width -1 :style released-button) :background ,organic-dark-white :foreground ,organic-dark-black))))
-       `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button) :background ,organic-light-white :foreground ,organic-dark-black))))
+       `(mode-line ((,class :background ,organic-dark-white :foreground ,organic-dark-black)))
+       `(mode-line-inactive ((,class :background ,organic-shadow :foreground ,organic-dark-black)))
        `(link ((,class (:underline t :foreground ,organic-blue))))
        `(link-visited ((,class (:underline t :foreground ,organic-blue))))
        `(highlight ((,class (:background ,organic-highlight-green))))
@@ -145,6 +144,23 @@ The theme needs to be reloaded after changing anything in this group."
        `(trailing-whitespace ((,class (:background ,organic-red))))
 
        ;; external packages
+       ;; Tabbar
+       `(tabbar-default ((t (:inherit variable-pitch
+                             :height 0.8
+                             :foreground ,organic-green-black
+                             :background ,organic-highlight-gray))))
+       `(tabbar-button ((t (:inherit tabbar-default
+                            :background ,organic-shadow))))
+       `(tabbar-modified ((t (:inherit tabbar-button
+                              :foreground ,organic-green
+                              :bold t))))
+       `(tabbar-unselected ((t (:inherit tabbar-button))))
+       `(tabbar-selected ((t (:inherit tabbar-button
+                              :foreground ,organic-green-black
+                              :background ,organic-bg
+                              :bold t))))
+       '(tabbar-selected-modified ((t :inherit tabbar-selected)))
+
        ;; Jabber
        '(jabber-roster-user-chatty ((t (:inherit font-lock-type-face :bold t))))
        '(jabber-roster-user-online ((t (:inherit font-lock-keyword-face :bold t))))
@@ -320,17 +336,6 @@ The theme needs to be reloaded after changing anything in this group."
        `(powerline-active2 ((t (:background ,organic-dark-white :inherit mode-line))) t)
        `(powerline-inactive1  ((t (:background ,organic-light-white :inherit mode-line-inactive))) t)
        `(powerline-inactive2  ((t (:background ,organic-light-white :inherit mode-line-inactive))) t)
-
-       ;; Tabbar
-       `(tabbar-button ((t :inherit tabbar-default :box (:line-width 1 :color ,organic-gray))))
-       `(tabbar-modified ((t (:inherit tabbar-default :foreground ,organic-green
-                                       :bold t
-                                       :box (:line-width 1 :color ,organic-white-border
-                                                         :style released-button)))))
-       `(tabbar-selected ((t :inherit tabbar-default
-                             :box (:line-width 1 :color ,organic-white-border :style pressed-button)
-                             :foreground ,organic-black :bold t)))
-       '(tabbar-selected-modified ((t :inherit tabbar-selected)))
 
        ;; Company
        `(company-tooltip ((t :foreground ,organic-dark-gray :background ,organic-light-white)))
