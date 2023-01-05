@@ -120,7 +120,7 @@ The theme needs to be reloaded after changing anything in this group."
        `(font-lock-keyword-face ((,class (:foreground ,organic-purple :weight normal))))
        `(font-lock-string-face ((t (:foreground ,organic-green))) t)
        `(font-lock-doc-face ((t (:foreground ,organic-green))) t)
-       `(font-lock-type-face ((t (:foreground ,organic-teal :weight normal))))
+       `(font-lock-type-face ((t (:foreground ,organic-violet :weight normal))))
        `(font-lock-variable-name-face ((,class (:foreground ,organic-yellow))))
        `(font-lock-warning-face ((,class (:foreground ,organic-orange :weight normal))))
 
@@ -302,6 +302,7 @@ The theme needs to be reloaded after changing anything in this group."
        `(magit-section-heading ((t (:bold nil :foreground ,organic-purple))) t)
        `(magit-branch-local ((t (:foreground ,organic-yellow))) t)
        `(magit-tag ((t (:foreground ,organic-sun))) t)
+       `(git-commit-summary ((t (:foreground ,organic-teal))) t)
 
        ;; Git-Gutter
        `(git-gutter:added ((t (:foreground ,organic-green)) t))
