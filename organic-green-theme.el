@@ -72,11 +72,11 @@ The theme needs to be reloaded after changing anything in this group."
           (organic-sun             "#999900")
           (organic-green           "#119911")
           (organic-cyan            "#00A89B")
-          (organic-emerald         "#009A76")
           (organic-teal            "#0D7579")
           (organic-blue            "#0065CC")
           (organic-violet          "#5544EE")
           (organic-purple          "#912CEE")
+          (organic-magenta         "#D33682")
 
           (organic-sign-add        "#27A745")
           (organic-sign-change     "#2188FF")
@@ -237,7 +237,7 @@ The theme needs to be reloaded after changing anything in this group."
        ;; Markdown
        `(markdown-pre-face ((t (:foreground ,organic-green-black :family ,(face-attribute 'default :family)))))
        `(markdown-markup-face ((t (:foreground ,organic-green-black :family ,(face-attribute 'default :family)))))
-       `(markdown-language-keyword-face ((t (:foreground ,organic-emerald :family ,(face-attribute 'default :family)))))
+       `(markdown-language-keyword-face ((t (:foreground ,organic-green :family ,(face-attribute 'default :family)))))
        `(markdown-code-face ((t (:foreground ,organic-green :family ,(face-attribute 'default :family)))))
 
        ;; Rst
@@ -276,6 +276,7 @@ The theme needs to be reloaded after changing anything in this group."
 
        ;; Ace-Jump
        `(ace-jump-face-foreground ((t (:background ,organic-marker-yellow :underline nil))) t)
+       `(ace-jump-face-background ((t (:foreground ,organic-dark-gray :underline nil))) t)
 
        ;; Diff
        `(diff-indicator-added ((t (:foreground ,organic-green)) t))
@@ -373,7 +374,7 @@ The theme needs to be reloaded after changing anything in this group."
 
        ;;Highlight pair parentheses
        `(show-paren-match ((t (:background ,organic-highlight-yellow))))
-       `(show-paren-mismatch ((t (:background ,organic-red))))
+       `(show-paren-mismatch ((t (:background ,organic-marker-red))))
 
        ;; Rainbow-Delimiters
        ;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
@@ -385,7 +386,8 @@ The theme needs to be reloaded after changing anything in this group."
        `(rainbow-delimiters-depth-6-face ((t (:foreground ,organic-sun :background ,organic-bg))))
        `(rainbow-delimiters-depth-7-face ((t (:foreground ,organic-yellow :background ,organic-bg))))
        `(rainbow-delimiters-depth-8-face ((t (:foreground ,organic-orange :background ,organic-bg))))
-       `(rainbow-delimiters-depth-9-face ((t (:foreground ,organic-purple :background ,organic-bg)))))
+       `(rainbow-delimiters-depth-9-face ((t (:foreground ,organic-magenta :background ,organic-bg))))
+       `(rainbow-delimiters-base-error-face ((t (:foreground ,organic-red)))))
 
       (custom-set-faces
        ;; Multi-Magit
