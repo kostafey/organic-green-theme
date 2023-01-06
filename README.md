@@ -21,10 +21,10 @@ Version 1 by default. Set version 2 (experimental & subject to future changes):
 (setq organic-green-version 2)
 ```
 <p align="center">
-  <img src="https://github.com/kostafey/organicgreen.nvim/blob/master/img/palette.svg" width="400" />
+  <img src="img/palette.svg" width="400" />
 </p>
 
-<img src="https://user-images.githubusercontent.com/1282079/210905413-ac31b275-73e4-4e45-a45e-8ffd65ff4a50.png" width="800" />
+<img src="https://user-images.githubusercontent.com/1282079/211122549-7a62f15e-39e4-4254-8ca1-7a490a0afb21.png" width="800" />
 
 ## Version 1
 
