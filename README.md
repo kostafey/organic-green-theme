@@ -37,6 +37,6 @@ You can set all fonts for editing from bold to normal:
 
 ## License
 
-Copyright (c) 2009-2022 Kostafey <kostafey@gmail.com>
+Copyright (c) 2009-2023 Kostafey <kostafey@gmail.com>
 
 Distributed under the General Public License 2.0+

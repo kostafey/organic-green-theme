@@ -1,6 +1,6 @@
 ﻿;;; organic-green-theme.el --- Low-contrast green color theme.
 
-;;; Copyright © 2009-2022 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2023 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -307,9 +307,13 @@ The theme needs to be reloaded after changing anything in this group."
        `(git-gutter:added ((t (:foreground ,organic-green)) t))
        `(git-gutter:deleted ((t (:foreground ,organic-red))) t)
        `(git-gutter:modified ((t (:foreground ,organic-blue))) t)
-       `(git-gutter-fr:added ((t (:foreground ,organic-sign-add :background ,organic-sign-add)) t))
+       `(git-gutter-fr:added ((t (:foreground ,organic-sign-add :background ,organic-highlight-gray)) t))
        `(git-gutter-fr:deleted ((t (:foreground ,organic-sign-delete :background ,organic-sign-delete))) t)
-       `(git-gutter-fr:modified ((t (:foreground ,organic-sign-change :background ,organic-sign-change))) t)
+       `(git-gutter-fr:modified ((t (:foreground ,organic-sign-change :background ,organic-highlight-gray))) t)
+       ;; diff-hl
+       `(diff-hl-insert ((t (:foreground ,organic-sign-add :background ,organic-highlight-gray)) t))
+       `(diff-hl-delete ((t (:foreground ,organic-sign-delete :background ,organic-highlight-gray))) t)
+       `(diff-hl-change ((t (:foreground ,organic-sign-change :background ,organic-highlight-gray))) t)
 
        ;; Org-Mode
        `(org-table ((t (:foreground ,organic-teal))) t)
