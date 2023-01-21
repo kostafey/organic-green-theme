@@ -308,7 +308,7 @@ The theme needs to be reloaded after changing anything in this group."
        `(git-gutter:deleted ((t (:foreground ,organic-red))) t)
        `(git-gutter:modified ((t (:foreground ,organic-blue))) t)
        `(git-gutter-fr:added ((t (:foreground ,organic-sign-add :background ,organic-highlight-gray)) t))
-       `(git-gutter-fr:deleted ((t (:foreground ,organic-sign-delete :background ,organic-sign-delete))) t)
+       `(git-gutter-fr:deleted ((t (:foreground ,organic-sign-delete :background ,organic-highlight-gray))) t)
        `(git-gutter-fr:modified ((t (:foreground ,organic-sign-change :background ,organic-highlight-gray))) t)
        ;; diff-hl
        `(diff-hl-insert ((t (:foreground ,organic-sign-add :background ,organic-highlight-gray)) t))
