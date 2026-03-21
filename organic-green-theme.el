@@ -327,9 +327,9 @@ The theme needs to be reloaded after changing anything in this group."
    `(org-level-4 ((t (:foreground ,organic-green))) t)
    `(org-level-5 ((t (:foreground ,organic-sun))) t)
    `(org-level-6 ((t (:foreground ,organic-orange))) t)
-   `(org-block ((,class (:foreground ,organic-fg))))
-   `(org-block-begin-line ((t (:foreground ,organic-blue))) t)
-   `(org-block-end-line ((t (:foreground ,organic-blue))) t)
+   `(org-block ((,class (:foreground ,organic-black))))
+   `(org-block-begin-line ((t (:foreground ,organic-gray))) t)
+   `(org-block-end-line ((t (:foreground ,organic-gray))) t)
    `(org-done ((t (:inherit success))) t)
    `(org-todo ((t (:inherit warning))) t)
 
