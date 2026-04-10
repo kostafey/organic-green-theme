@@ -22,6 +22,6 @@ Then in your emacs config somewhere:
 
 ## License
 
-Copyright (c) 2009-2023 Kostafey <kostafey@gmail.com>
+Copyright (c) 2009-2026 Kostafey <kostafey@gmail.com>
 
 Distributed under the General Public License 2.0+

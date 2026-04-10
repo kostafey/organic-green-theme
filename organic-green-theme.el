@@ -1,6 +1,6 @@
-﻿;;; organic-green-theme.el --- Low-contrast green color theme.
+﻿;;; organic-green-theme.el --- Light green color theme.
 
-;;; Copyright © 2009-2023 - Kostafey <kostafey@gmail.com>
+;;; Copyright © 2009-2026 - Kostafey <kostafey@gmail.com>
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -26,27 +26,11 @@
 
 (deftheme organic-green "Light green color theme.")
 
-(defgroup organic-green nil
-  "Organic-green theme customization.
-The theme needs to be reloaded after changing anything in this group."
-  :group 'faces)
-
-(defcustom organic-green-boldless nil
-  "Use bold text in less code constructs."
-  :type 'boolean
-  :group 'organic-green)
-
-(defcustom organic-green-version 1
-  "Set organic-green color theme version."
-  :type 'integer
-  :group 'organic-green)
-
-(let ((class '((class color) (min-colors 89)))
-      ;; base color pallet
-      (organic-fg        "#326B6B")
-      (organic-bg        "#F0FFF0")
-      (organic-cursor-fg "#225522")
-      (organic-cursor-bg "#D5F0D5")
+(let (;; base color palette
+      (organic-fg               "#326B6B")
+      (organic-bg               "#F0FFF0")
+      (organic-cursor-fg        "#225522")
+      (organic-cursor-bg        "#D5F0D5")
       (organic-highlight-yellow "#F0F0A1")
       (organic-highlight-green  "#C1F3CA")
       (organic-highlight-gray   "#E3F2E1")
@@ -91,55 +75,87 @@ The theme needs to be reloaded after changing anything in this group."
   (custom-theme-set-faces
    'organic-green
    ;; essential styles
-   `(default ((,class (:foreground ,organic-fg :background ,organic-bg))))
+   `(default ((t (:foreground ,organic-fg :background ,organic-bg))))
 
    ;; base
-   `(bold ((,class (:weight bold))))
-   `(extra-bold ((,class (:weight extra-bold))))
-   `(semi-bold ((,class (:weight semi-bold))))
-   `(italic ((,class (:slant italic))))
-   `(error ((,class (:foreground ,organic-red))))
-   `(escape-glyph ((,class (:foreground ,organic-sun))))
-   `(warning ((,class (:foreground ,organic-orange))))
-   `(success ((,class (:foreground ,organic-sun))))
-   `(compilation-info ((,class (:foreground ,organic-green))))
-   `(shadow ((,class (:foreground ,organic-gray))))
-   `(match ((,class (:foreground ,organic-yellow))))
-   `(menu ((,class (:foreground ,organic-violet))))
-   `(completions-annotations ((,class (:foreground ,organic-green))))
-   `(completions-common-part ((,class (:foreground ,organic-blue :bold t :underline t))))       
-   `(completions-first-difference ((,class (:foreground ,organic-blue))))
-   `(font-lock-builtin-face ((,class (:foreground ,organic-teal))))
-   `(font-lock-comment-face ((,class (:foreground ,organic-gray))))
-   `(font-lock-constant-face ((,class (:foreground ,organic-blue))))
-   `(font-lock-function-name-face ((,class (:foreground ,organic-blue))))
-   `(font-lock-keyword-face ((,class (:foreground ,organic-purple))))
+   `(bold ((t (:weight bold))))
+   `(extra-bold ((t (:weight extra-bold))))
+   `(semi-bold ((t (:weight semi-bold))))
+   `(italic ((t (:slant italic))))
+   `(error ((t (:foreground ,organic-red))))
+   `(escape-glyph ((t (:foreground ,organic-sun))))
+   `(warning ((t (:foreground ,organic-orange))))
+   `(success ((t (:foreground ,organic-sun))))
+   `(compilation-info ((t (:foreground ,organic-green))))
+   `(shadow ((t (:foreground ,organic-gray))))
+   `(match ((t (:foreground ,organic-yellow))))
+   `(menu ((t (:foreground ,organic-violet))))
+   `(completions-annotations ((t (:foreground ,organic-green))))
+   `(completions-common-part ((t (:foreground ,organic-blue :bold t :underline t))))
+   `(completions-first-difference ((t (:foreground ,organic-blue))))
+   `(font-lock-builtin-face ((t (:foreground ,organic-teal))))
+   `(font-lock-comment-face ((t (:foreground ,organic-gray))))
+   `(font-lock-constant-face ((t (:foreground ,organic-blue))))
+   `(font-lock-function-name-face ((t (:foreground ,organic-blue))))
+   `(font-lock-keyword-face ((t (:foreground ,organic-purple))))
    `(font-lock-string-face ((t (:foreground ,organic-green))) t)
    `(font-lock-doc-face ((t (:foreground ,organic-green))) t)
    `(font-lock-type-face ((t (:foreground ,organic-teal))))
-   `(font-lock-variable-name-face ((,class (:foreground ,organic-yellow))))
-   `(font-lock-warning-face ((,class (:foreground ,organic-orange))))
+   `(font-lock-variable-name-face ((t (:foreground ,organic-yellow))))
+   `(font-lock-warning-face ((t (:foreground ,organic-orange))))
 
    ;; ui
-   `(cursor ((,class (:background ,organic-cursor-fg))))
-   `(fringe ((,class (:background ,organic-highlight-gray :foreground ,organic-gray))))
+   `(cursor ((t (:background ,organic-cursor-fg))))
+   `(fringe ((t (:background ,organic-highlight-gray :foreground ,organic-gray))))
    ;; TODO:
-   `(vertical-border ((,class (:foreground ,organic-medium-gray))))
-   `(minibuffer-prompt ((,class (:foreground ,organic-blue :weight bold))))
-   `(mode-line ((,class :background ,organic-dark-white :foreground ,organic-dark-black)))
-   `(mode-line-inactive ((,class :background ,organic-shadow :foreground ,organic-dark-black)))
-   `(link ((,class (:underline t :foreground ,organic-blue))))
-   `(link-visited ((,class (:underline t :foreground ,organic-blue))))
-   `(highlight ((,class (:background ,organic-highlight-green))))
-   `(hl-line ((,class (:background ,organic-cursor-bg :inverse-video nil))))
-   `(region ((,class (:background ,organic-highlight-yellow))))
-   `(lazy-highlight ((,class (:background ,organic-highlight-green :inverse-video nil))))
-   `(isearch ((,class (:foreground ,organic-fg :background ,organic-marker-yellow :inverse-video nil))))
-   `(cua-rectangle ((,class (:background ,organic-marker-green))))
-   `(secondary-selection ((,class (:background ,organic-highlight-blue))))
-   `(trailing-whitespace ((,class (:background ,organic-red))))
+   `(vertical-border ((t (:foreground ,organic-medium-gray))))
+   `(minibuffer-prompt ((t (:foreground ,organic-blue :weight bold))))
+   `(mode-line ((t :background ,organic-dark-white :foreground ,organic-dark-black)))
+   `(mode-line-inactive ((t :background ,organic-shadow :foreground ,organic-dark-black)))
+   `(link ((t (:underline t :foreground ,organic-blue))))
+   `(link-visited ((t (:underline t :foreground ,organic-blue))))
+   `(highlight ((t (:background ,organic-highlight-green))))
+   `(hl-line ((t (:background ,organic-cursor-bg :inverse-video nil))))
+   `(region ((t (:background ,organic-highlight-yellow))))
+   `(lazy-highlight ((t (:background ,organic-highlight-green :inverse-video nil))))
+   `(isearch ((t (:foreground ,organic-fg :background ,organic-marker-yellow :inverse-video nil))))
+   `(cua-rectangle ((t (:background ,organic-marker-green))))
+   `(secondary-selection ((t (:background ,organic-highlight-blue))))
+   `(trailing-whitespace ((t (:background ,organic-red))))
 
    ;; external packages
+   ;; tab-line
+   `(tab-line
+     ((t (:inherit nil
+          :foreground ,organic-green-black
+          :background ,organic-highlight-gray
+          :height 0.9
+          :box nil))))
+   `(tab-line-tab
+     ((t (:inherit nil
+          :foreground ,organic-green-black
+          :background ,organic-highlight-gray
+          :weight normal
+          :box nil))))
+   `(tab-line-tab-inactive
+     ((t (:inherit nil
+          :foreground ,organic-green-black
+          :background ,organic-shadow
+          :weight normal
+          :box nil))))
+   `(tab-line-highlight
+     ((t (:inherit nil
+          :foreground ,organic-green-black
+          :background ,organic-bg
+          :weight normal
+          :box nil))))
+   `(tab-line-tab-current
+     ((t (:inherit nil
+          :foreground ,organic-green-black
+          :background ,organic-bg
+          :weight semi-bold
+          :box nil))))
+
    ;; Tabbar
    `(tabbar-default ((t (:inherit variable-pitch
                          :height 0.8
@@ -327,7 +343,7 @@ The theme needs to be reloaded after changing anything in this group."
    `(org-level-4 ((t (:foreground ,organic-green))) t)
    `(org-level-5 ((t (:foreground ,organic-sun))) t)
    `(org-level-6 ((t (:foreground ,organic-orange))) t)
-   `(org-block ((,class (:foreground ,organic-black))))
+   `(org-block ((t (:foreground ,organic-black))))
    `(org-block-begin-line ((t (:foreground ,organic-gray))) t)
    `(org-block-end-line ((t (:foreground ,organic-gray))) t)
    `(org-done ((t (:inherit success))) t)
@@ -357,8 +373,10 @@ The theme needs to be reloaded after changing anything in this group."
    `(company-tooltip-scrollbar-track ((t :background ,organic-dark-white)))
    `(company-quickhelp-color-background ((t :background ,organic-light-white)))
 
+   `(corfu-default ((t :foreground ,organic-dark-gray :background ,organic-light-white)))
+
    ;; Web-Mode
-   `(web-mode-current-element-highlight-face ((,class (:background ,organic-highlight-green))))
+   `(web-mode-current-element-highlight-face ((t (:background ,organic-highlight-green))))
    `(web-mode-html-tag-face ((t (:foreground ,organic-black))) t)
    `(web-mode-html-attr-name-face ((t (:foreground ,organic-blue))) t)
    `(web-mode-doctype-face ((t (:foreground ,organic-blue))) t)
