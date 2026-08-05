@@ -349,6 +349,9 @@
    `(org-done ((t (:inherit success))) t)
    `(org-todo ((t (:inherit warning))) t)
 
+   ;; asciidoc-mode
+   '(asciidoc-code-face ((t (:inherit font-lock-string-face))))
+
    ;; Misc
    `(nxml-element-local-name ((t (:foreground ,organic-blue))) t)
    `(yas-field-highlight-face ((t (:background ,organic-yellow))))
