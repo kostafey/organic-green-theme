@@ -406,6 +406,9 @@
    `(show-paren-match ((t (:background ,organic-highlight-yellow))))
    `(show-paren-mismatch ((t (:background ,organic-marker-red))))
 
+   ;; Agent Shell
+   `(agent-shell-model ((t :inherit font-lock-constant-face)))
+
    ;; Rainbow-Delimiters
    ;; (1 (2 (3 (4 (5 (6 (7 (8 (9 (10 (11 (12))))))))))))
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,organic-medium-gray :background ,organic-bg))))
