@@ -252,10 +252,11 @@
    `(lui-time-stamp-face ((t (:foreground ,organic-green))))
 
    ;; Markdown
-   `(markdown-pre-face ((t (:foreground ,organic-green-black :family ,(face-attribute 'default :family)))))
-   `(markdown-markup-face ((t (:foreground ,organic-green-black :family ,(face-attribute 'default :family)))))
-   `(markdown-language-keyword-face ((t (:foreground ,organic-green :family ,(face-attribute 'default :family)))))
-   `(markdown-code-face ((t (:foreground ,organic-green :family ,(face-attribute 'default :family)))))
+   `(markdown-pre-face ((t (:foreground ,organic-green-black))))
+   `(markdown-markup-face ((t (:foreground ,organic-green-black))))
+   `(markdown-language-keyword-face ((t (:foreground ,organic-green))))
+   `(markdown-code-face ((t (:foreground ,organic-blue))))
+   `(markdown-blockquote-face ((t (:foreground ,organic-green))))
 
    ;; Rst
    '(rst-definition ((t (:inherit font-lock-constant-face))) t)
