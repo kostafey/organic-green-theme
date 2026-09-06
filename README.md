@@ -1,8 +1,13 @@
 # organic-green color theme
 
+[![MELPA](https://melpa.org/packages/organic-green-theme-badge.svg)](https://melpa.org/#/organic-green-theme)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](LICENSE)
 
-Light green color theme for Emacs.
+<div>
+  <img src="img/organic-green.svg" width="50">
+  <br/>
+  Light green color theme for Emacs.
+</div>
 
 ## Installation:
 
@@ -20,7 +25,7 @@ Then in your emacs config somewhere:
   <img src="img/palette.svg" width="400" />
 </p>
 
-<img src="https://user-images.githubusercontent.com/1282079/211122549-7a62f15e-39e4-4254-8ca1-7a490a0afb21.png" width="800" />
+<img src="https://github.com/user-attachments/assets/97c8ab34-a94d-4a7e-9472-f28a5b05f1ae" width="800" />
 
 ## License
 
