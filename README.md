@@ -1,5 +1,7 @@
 # organic-green color theme
 
+[![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](LICENSE)
+
 Light green color theme for Emacs.
 
 ## Installation:
@@ -24,4 +26,5 @@ Then in your emacs config somewhere:
 
 Copyright (c) 2009-2026 Kostafey <kostafey@gmail.com>
 
-Distributed under the General Public License 2.0+
+Distributed under the General Public License 2.0+, see [LICENSE](LICENSE)
+for the full text.
