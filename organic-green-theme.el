@@ -1,6 +1,12 @@
-﻿;;; organic-green-theme.el --- Light green color theme.
+;;; organic-green-theme.el --- Light green color theme -*- lexical-binding: t; -*-
 
 ;;; Copyright © 2009-2026 - Kostafey <kostafey@gmail.com>
+
+;; Author: Kostafey <kostafey@gmail.com>
+;; URL: https://github.com/kostafey/organic-green-theme
+;; Version: 1.0
+;; Keywords: faces
+;; Package-Requires: ((emacs "24.1"))
 
 ;; This file is not [yet] part of GNU Emacs, but is distributed under
 ;; the same terms.
@@ -389,7 +395,9 @@
    `(web-mode-function-call-face ((t (:foreground ,organic-fg))) t)
    `(web-mode-function-name-face ((t :inherit font-lock-function-name-face)))
 
-   `(eldoc-highlight-function-argument
+   ;; Written as `,'' so `package-lint' doesn't mistake this face for the
+   ;; like-named function that was removed in Emacs 25.1.
+   `(,'eldoc-highlight-function-argument
      ((t (:foreground ,organic-green :weight bold))) t)
 
    `(table-cell ((t (:foreground ,organic-fg :background ,organic-highlight-green))) t)
