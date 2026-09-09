@@ -258,13 +258,18 @@
    `(lui-time-stamp-face ((t (:foreground ,organic-green))))
 
    ;; Markdown
-   `(markdown-pre-face ((t (:foreground ,organic-green-black))))
-   `(markdown-markup-face ((t (:foreground ,organic-green-black))))
+   `(markdown-header-delimiter-face ((t (:foreground ,organic-black))))
+   `(markdown-header-face-1 ((t (:foreground ,organic-purple))))
+   `(markdown-header-face-2 ((t (:foreground ,organic-purple))))
+   `(markdown-header-face-3 ((t (:foreground ,organic-purple))))
+   `(markdown-pre-face ((t (:foreground ,organic-black))))
+   `(markdown-markup-face ((t (:foreground ,organic-black))))
    `(markdown-language-keyword-face ((t (:foreground ,organic-green))))
    `(markdown-code-face ((t (:foreground ,organic-blue))))
    `(markdown-blockquote-face ((t (:foreground ,organic-green))))
-   `(markdown-italic-face ((t (:foreground ,organic-purple))))
+   `(markdown-italic-face ((t (:foreground ,organic-yellow))))
    `(markdown-bold-face ((t (:foreground ,organic-orange))))
+   `(markdown-table-face ((t (:foreground ,organic-teal))))
 
    ;; Rst
    '(rst-definition ((t (:inherit font-lock-constant-face))) t)
