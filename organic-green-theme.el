@@ -263,6 +263,8 @@
    `(markdown-language-keyword-face ((t (:foreground ,organic-green))))
    `(markdown-code-face ((t (:foreground ,organic-blue))))
    `(markdown-blockquote-face ((t (:foreground ,organic-green))))
+   `(markdown-italic-face ((t (:foreground ,organic-purple))))
+   `(markdown-bold-face ((t (:foreground ,organic-orange))))
 
    ;; Rst
    '(rst-definition ((t (:inherit font-lock-constant-face))) t)
