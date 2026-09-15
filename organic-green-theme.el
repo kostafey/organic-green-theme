@@ -338,6 +338,7 @@
    `(git-commit-summary ((t (:foreground ,organic-teal))) t)
 
    ;; Transient
+   `(transient-heading ((t (:foreground ,organic-purple))) t)
    `(transient-key-exit ((t (:foreground ,organic-blue))) t)
    `(transient-key-stack ((t (:foreground ,organic-magenta))) t)
    `(transient-key-stay ((t (:foreground ,organic-green))) t)
