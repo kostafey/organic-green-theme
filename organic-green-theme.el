@@ -337,6 +337,12 @@
    `(magit-filename ((t (:inherit default))) t)
    `(git-commit-summary ((t (:foreground ,organic-teal))) t)
 
+   ;; Transient
+   `(transient-key-exit ((t (:foreground ,organic-blue))) t)
+   `(transient-key-stack ((t (:foreground ,organic-magenta))) t)
+   `(transient-key-stay ((t (:foreground ,organic-green))) t)
+   `(transient-key-return ((t (:foreground ,organic-sun))) t)
+
    ;; Git-Gutter
    `(git-gutter:added ((t (:foreground ,organic-green)) t))
    `(git-gutter:deleted ((t (:foreground ,organic-red))) t)
