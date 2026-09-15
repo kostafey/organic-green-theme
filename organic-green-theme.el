@@ -55,7 +55,7 @@
 
       (organic-red             "#EF2929")
       (organic-orange          "#CE5C00")
-      (organic-yellow          "#AD7C2E")
+      (organic-yellow          "#B08008")
       (organic-sun             "#999900")
       (organic-green           "#119011")
       (organic-teal            "#008888")
