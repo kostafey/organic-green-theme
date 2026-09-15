@@ -269,7 +269,7 @@
    `(markdown-blockquote-face ((t (:foreground ,organic-green))))
    `(markdown-italic-face ((t (:foreground ,organic-yellow))))
    `(markdown-bold-face ((t (:foreground ,organic-orange))))
-   `(markdown-table-face ((t (:foreground ,organic-teal))))
+   `(markdown-table-face ((t (:foreground ,organic-fg))))
 
    ;; Rst
    '(rst-definition ((t (:inherit font-lock-constant-face))) t)
@@ -350,7 +350,7 @@
    `(diff-hl-change ((t (:foreground ,organic-sign-change :background ,organic-highlight-gray))) t)
 
    ;; Org-Mode
-   `(org-table ((t (:foreground ,organic-teal))) t)
+   `(org-table ((t (:foreground ,organic-fg))) t)
    `(org-level-1 ((t (:foreground ,organic-purple))) t)
    `(org-level-2 ((t (:foreground ,organic-blue))) t)
    `(org-level-3 ((t (:foreground ,organic-yellow))) t)
