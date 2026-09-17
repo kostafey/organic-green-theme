@@ -378,7 +378,7 @@
 
    ;; Misc
    `(nxml-element-local-name ((t (:foreground ,organic-blue))) t)
-   `(yas-field-highlight-face ((t (:background ,organic-yellow))))
+   `(yas-field-highlight-face ((t (:background ,organic-highlight-blue))))
    `(idle-highlight ((t (:background ,organic-highlight-green))) t)
    `(comint-highlight-prompt ((t (:foreground ,organic-blue))) t)
    `(flx-highlight-face  ((t (:foreground ,organic-blue :bold t :underline t))) t)
