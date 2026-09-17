@@ -84,10 +84,10 @@
    `(default ((t (:foreground ,organic-fg :background ,organic-bg))))
 
    ;; base
-   `(bold ((t (:weight bold))))
-   `(extra-bold ((t (:weight extra-bold))))
-   `(semi-bold ((t (:weight semi-bold))))
-   `(italic ((t (:slant italic))))
+   `(bold ((t (:weight normal :foreground ,organic-orange))))
+   `(extra-bold ((t (:weight normal :foreground ,organic-red))))
+   `(semi-bold ((t (:weight normal :foreground ,organic-yellow))))
+   `(italic ((t (:slant normal :foreground ,organic-yellow))))
    `(error ((t (:foreground ,organic-red))))
    `(escape-glyph ((t (:foreground ,organic-sun))))
    `(warning ((t (:foreground ,organic-orange))))
@@ -357,16 +357,19 @@
    `(diff-hl-change ((t (:foreground ,organic-sign-change :background ,organic-highlight-gray))) t)
 
    ;; Org-Mode
+   `(org-document-title ((t (:foreground ,organic-green-black))) t)
+   `(org-code ((t (:foreground ,organic-blue))) t)
    `(org-table ((t (:foreground ,organic-fg))) t)
    `(org-level-1 ((t (:foreground ,organic-purple))) t)
    `(org-level-2 ((t (:foreground ,organic-blue))) t)
-   `(org-level-3 ((t (:foreground ,organic-yellow))) t)
+   `(org-level-3 ((t (:foreground ,organic-teal))) t)
    `(org-level-4 ((t (:foreground ,organic-green))) t)
-   `(org-level-5 ((t (:foreground ,organic-sun))) t)
+   `(org-level-5 ((t (:foreground ,organic-yellow))) t)
    `(org-level-6 ((t (:foreground ,organic-orange))) t)
    `(org-block ((t (:foreground ,organic-black))))
    `(org-block-begin-line ((t (:foreground ,organic-gray))) t)
    `(org-block-end-line ((t (:foreground ,organic-gray))) t)
+   `(org-checkbox ((t (:foreground ,organic-green))) t)
    `(org-done ((t (:inherit success))) t)
    `(org-todo ((t (:inherit warning))) t)
 
