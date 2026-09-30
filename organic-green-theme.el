@@ -312,8 +312,8 @@
    ;; Diff
    `(diff-indicator-added ((t (:foreground ,organic-green)) t))
    `(diff-added ((t (:foreground ,organic-green)) t))
-   `(diff-indicator-removed ((t (:foreground ,organic-red))) t)
-   `(diff-removed ((t (:foreground ,organic-red))) T)
+   `(diff-indicator-removed ((t (:foreground ,organic-sign-delete))) t)
+   `(diff-removed ((t (:foreground ,organic-sign-delete))) T)
 
    ;; Magit
    `(magit-diff-add ((t (:foreground ,organic-green)) t))
