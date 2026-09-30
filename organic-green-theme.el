@@ -372,6 +372,13 @@
    `(org-checkbox ((t (:foreground ,organic-green))) t)
    `(org-done ((t (:inherit success))) t)
    `(org-todo ((t (:inherit warning))) t)
+   `(org-drawer ((t (:foreground ,organic-black))) t)
+   `(org-special-keyword ((t (:foreground ,organic-violet))) t)
+   `(org-property-value ((t (:foreground ,organic-green))) t)
+
+   ;; Verb
+   `(verb-header ((t (:foreground ,organic-violet))) t)
+   `(verb-code-tag ((t (:foreground ,organic-green))) t)
 
    ;; asciidoc-mode
    '(asciidoc-code-face ((t (:inherit font-lock-string-face))))
