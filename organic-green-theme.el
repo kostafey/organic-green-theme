@@ -106,7 +106,7 @@
    `(font-lock-keyword-face ((t (:foreground ,organic-purple))))
    `(font-lock-string-face ((t (:foreground ,organic-green))) t)
    `(font-lock-doc-face ((t (:foreground ,organic-green))) t)
-   `(font-lock-type-face ((t (:foreground ,organic-teal))))
+   `(font-lock-type-face ((t (:foreground ,organic-green-black))))
    `(font-lock-variable-name-face ((t (:foreground ,organic-yellow))))
    `(font-lock-warning-face ((t (:foreground ,organic-orange))))
 
