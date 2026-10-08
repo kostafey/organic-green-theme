@@ -103,11 +103,13 @@
    `(font-lock-comment-face ((t (:foreground ,organic-gray))))
    `(font-lock-constant-face ((t (:foreground ,organic-blue))))
    `(font-lock-function-name-face ((t (:foreground ,organic-blue))))
+   `(font-lock-function-call-face ((t (:foreground ,organic-fg))))
    `(font-lock-keyword-face ((t (:foreground ,organic-purple))))
    `(font-lock-string-face ((t (:foreground ,organic-green))) t)
    `(font-lock-doc-face ((t (:foreground ,organic-green))) t)
    `(font-lock-type-face ((t (:foreground ,organic-green-black))))
    `(font-lock-variable-name-face ((t (:foreground ,organic-yellow))))
+   `(font-lock-variable-use-face ((t (:foreground ,organic-fg))))
    `(font-lock-warning-face ((t (:foreground ,organic-orange))))
 
    ;; ui
