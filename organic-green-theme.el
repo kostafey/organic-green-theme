@@ -112,6 +112,7 @@
    `(font-lock-variable-use-face ((t (:foreground ,organic-fg))))
    `(font-lock-warning-face ((t (:foreground ,organic-orange))))
    `(font-lock-property-name-face ((t (:foreground ,organic-blue))))
+   `(font-lock-property-use-face ((t (:foreground ,organic-blue))))
 
    ;; ui
    `(cursor ((t (:background ,organic-cursor-fg))))
