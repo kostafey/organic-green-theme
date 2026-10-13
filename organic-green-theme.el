@@ -361,7 +361,7 @@
    `(diff-hl-change ((t (:foreground ,organic-sign-change :background ,organic-highlight-gray))) t)
 
    ;; Org-Mode
-   `(org-document-title ((t (:foreground ,organic-green-black))) t)
+   `(org-document-title ((t (:foreground ,organic-black))) t)
    `(org-code ((t (:foreground ,organic-blue))) t)
    `(org-table ((t (:foreground ,organic-fg))) t)
    `(org-level-1 ((t (:foreground ,organic-purple))) t)
@@ -377,7 +377,7 @@
    `(org-todo ((t (:inherit warning))) t)
    `(org-done ((t (:foreground ,organic-green))) t)
    `(org-headline-done ((t (:foreground ,organic-teal))) t)
-   `(org-drawer ((t (:foreground ,organic-black))) t)
+   `(org-drawer ((t (:foreground ,organic-green-black))) t)
    `(org-special-keyword ((t (:foreground ,organic-violet))) t)
    `(org-property-value ((t (:foreground ,organic-green))) t)
 
