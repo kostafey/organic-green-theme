@@ -269,7 +269,7 @@
    `(markdown-pre-face ((t (:foreground ,organic-black))))
    `(markdown-markup-face ((t (:foreground ,organic-black))))
    `(markdown-language-keyword-face ((t (:foreground ,organic-green))))
-   `(markdown-code-face ((t (:foreground ,organic-blue))))
+   `(markdown-code-face ((t (:foreground ,organic-green-black))))
    `(markdown-blockquote-face ((t (:foreground ,organic-green))))
    `(markdown-italic-face ((t (:foreground ,organic-yellow))))
    `(markdown-bold-face ((t (:foreground ,organic-orange))))
@@ -362,7 +362,8 @@
 
    ;; Org-Mode
    `(org-document-title ((t (:foreground ,organic-black))) t)
-   `(org-code ((t (:foreground ,organic-blue))) t)
+   `(org-code ((t (:foreground ,organic-green-black))) t)
+   `(org-verbatim ((t (:inherit org-code))) t)
    `(org-table ((t (:foreground ,organic-fg))) t)
    `(org-level-1 ((t (:foreground ,organic-purple))) t)
    `(org-level-2 ((t (:foreground ,organic-blue))) t)
