@@ -266,6 +266,7 @@
    `(markdown-header-face-1 ((t (:foreground ,organic-purple))))
    `(markdown-header-face-2 ((t (:foreground ,organic-purple))))
    `(markdown-header-face-3 ((t (:foreground ,organic-purple))))
+   `(markdown-header-face-4 ((t (:foreground ,organic-blue))))
    `(markdown-pre-face ((t (:foreground ,organic-black))))
    `(markdown-markup-face ((t (:foreground ,organic-black))))
    `(markdown-language-keyword-face ((t (:foreground ,organic-green))))
