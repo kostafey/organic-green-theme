@@ -390,11 +390,20 @@
    ;; asciidoc-mode
    '(asciidoc-code-face ((t (:inherit font-lock-string-face))))
 
+   ;; eglot
+   `(eglot-highlight-symbol-face ((t (:weight bold))))
+   '(eglot-semantic-macro ((t (:inherit font-lock-keyword-face))))
+   '(eglot-semantic-keyword ((t (:inherit font-lock-builtin-face))))
+   '(eglot-semantic-definition ((t (:inherit font-lock-function-name-face))))
+   '(eglot-semantic-function ((t (:inherit default))))
+   '(eglot-semantic-variable ((t (:inherit default))))
+   '(eglot-semantic-type ((t (:inherit font-lock-type-face))))
+   '(eglot-semantic-event ((t (:inherit font-lock-type-face))))
+
    ;; Misc
    `(nxml-element-local-name ((t (:foreground ,organic-blue))) t)
    `(yas-field-highlight-face ((t (:background ,organic-highlight-blue))))
    `(idle-highlight ((t (:background ,organic-highlight-green))) t)
-   `(eglot-highlight-symbol-face ((t (:weight bold))))
    `(comint-highlight-prompt ((t (:foreground ,organic-blue))) t)
    `(flx-highlight-face  ((t (:foreground ,organic-blue :bold t :underline t))) t)
 
