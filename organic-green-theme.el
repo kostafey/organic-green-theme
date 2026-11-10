@@ -91,7 +91,7 @@
    `(error ((t (:foreground ,organic-red))))
    `(escape-glyph ((t (:foreground ,organic-sun))))
    `(warning ((t (:foreground ,organic-orange))))
-   `(success ((t (:foreground ,organic-sun))))
+   `(success ((t (:foreground ,organic-green))))
    `(compilation-info ((t (:foreground ,organic-green))))
    `(shadow ((t (:foreground ,organic-gray))))
    `(match ((t (:foreground ,organic-yellow))))
