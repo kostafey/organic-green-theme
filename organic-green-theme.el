@@ -380,7 +380,7 @@
    `(org-done ((t (:foreground ,organic-green))) t)
    `(org-headline-done ((t (:foreground ,organic-teal))) t)
    `(org-drawer ((t (:foreground ,organic-green-black))) t)
-   `(org-special-keyword ((t (:foreground ,organic-violet))) t)
+   `(org-special-keyword ((t (:foreground ,organic-blue))) t)
    `(org-property-value ((t (:foreground ,organic-green))) t)
 
    ;; Verb
