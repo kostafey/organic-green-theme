@@ -342,6 +342,10 @@
    `(magit-filename ((t (:inherit default))) t)
    `(git-commit-summary ((t (:foreground ,organic-teal))) t)
 
+   ;; Multi-Magit
+   `(multi-magit-branch-heading ((t (:foreground ,organic-yellow :box nil))) t)
+   `(multi-magit-repo-heading ((t (:foreground ,organic-black :box nil))) t)
+
    ;; Transient
    `(transient-heading ((t (:foreground ,organic-purple))) t)
    `(transient-key-exit ((t (:foreground ,organic-blue))) t)
@@ -473,9 +477,6 @@
    `(rainbow-delimiters-base-error-face ((t (:foreground ,organic-red)))))
 
   (custom-set-faces
-   ;; Multi-Magit
-   `(multi-magit-repo-heading ((t (:inherit magit-section-heading :box nil))))
-
    ;; Speedbar
    `(speedbar-selected-face ((t (:foreground ,organic-green :underline t))))
 
