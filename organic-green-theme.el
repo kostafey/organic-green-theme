@@ -386,6 +386,7 @@
    `(org-drawer ((t (:foreground ,organic-green-black))) t)
    `(org-special-keyword ((t (:foreground ,organic-blue))) t)
    `(org-property-value ((t (:foreground ,organic-green))) t)
+   `(org-formula ((t (:foreground ,organic-black))) t)
 
    ;; Verb
    `(verb-header ((t (:foreground ,organic-violet))) t)
