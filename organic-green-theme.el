@@ -368,7 +368,7 @@
    ;; Org-Mode
    `(org-document-title ((t (:foreground ,organic-black))) t)
    `(org-code ((t (:foreground ,organic-green-black))) t)
-   `(org-verbatim ((t (:inherit org-code))) t)
+   `(org-verbatim ((t (:inherit font-lock-string-face))) t)
    `(org-table ((t (:foreground ,organic-fg))) t)
    `(org-level-1 ((t (:foreground ,organic-purple))) t)
    `(org-level-2 ((t (:foreground ,organic-blue))) t)
@@ -381,7 +381,7 @@
    `(org-block-end-line ((t (:foreground ,organic-gray))) t)
    `(org-checkbox ((t (:foreground ,organic-green))) t)
    `(org-todo ((t (:inherit warning))) t)
-   `(org-done ((t (:foreground ,organic-green))) t)
+   `(org-done ((t (:inherit success))) t)
    `(org-headline-done ((t (:foreground ,organic-teal))) t)
    `(org-drawer ((t (:foreground ,organic-green-black))) t)
    `(org-special-keyword ((t (:foreground ,organic-blue))) t)
