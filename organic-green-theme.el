@@ -310,6 +310,12 @@
    '(sh-heredoc ((t (:inherit font-lock-string-face))))
    '(sh-quoted-exec ((t (:inherit font-lock-constant-face))))
 
+   ;; ansi-color: the ANSI colors of eshell, shell and compilation output.
+   `(ansi-color-red ((t (:foreground ,organic-red :background ,organic-red))))
+   `(ansi-color-green ((t (:foreground ,organic-green :background ,organic-green))))
+   `(ansi-color-yellow ((t (:foreground ,organic-sun :background ,organic-sun))))
+   `(ansi-color-cyan ((t (:foreground ,organic-blue :background ,organic-blue))))
+
    ;; Ace-Jump
    `(ace-jump-face-foreground ((t (:background ,organic-marker-yellow :underline nil))) t)
    `(ace-jump-face-background ((t (:foreground ,organic-dark-gray :underline nil))) t)
